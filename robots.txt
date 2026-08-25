@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://sara-pesso.github.io/epic-math-blog/sitemap.xml
+Sitemap: https://sara-pesso.github.io/sitemap.xml
