@@ -37,18 +37,25 @@ a letter, with respect to a stationary observer [@sfunotation]. These
 are known as the 6 Basic Moves and are explained further in Figure
 [1](#tab:placeholder){reference-type="ref" reference="tab:placeholder"}.
 
-$$    
-\begin{tabular}{cc}
-    R&  90 deg. cw rotation of the RIGHT face\\
-    L&  90 deg. cw rotation of the LEFT face\\
-    U&  90 deg. cw rotation of the UP face\\
-    D&  90 deg. cw rotation of the DOWN face\\
-    F&  90 deg. cw rotation of the FRONT face\\
-    B&  90 deg. cw rotation of the BACK face\\
-\end{tabular}
-\caption{Table of the 6 Basic Cube Moves}
-\label{tab:placeholder}
-$$
+::: {#tab:placeholder}
+  --- ---------------------------------------
+   R   90 deg. cw rotation of the RIGHT face
+   L   90 deg. cw rotation of the LEFT face
+   U    90 deg. cw rotation of the UP face
+   D   90 deg. cw rotation of the DOWN face
+   F   90 deg. cw rotation of the FRONT face
+   B   90 deg. cw rotation of the BACK face
+  --- ---------------------------------------
+
+  : Table of the 6 Basic Cube Moves
+:::
+
+
+| Header 1 | Header 2 | Header 3 |
+| -------- | -------- | -------- |
+| Item 1   | Item 2   | Item 3   |
+| Item 4   | Item 5   | Item 6   |
+
 
 Note that $R', L', U', D',  F', B'$ represent the inverse of each cube
 move, or a 90 degree counter clockwise (ccw) rotation of the face.\
