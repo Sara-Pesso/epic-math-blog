@@ -3,9 +3,9 @@ layout: post
 title: The Secret Santa Question
 date: 2026-08-17
 description: How to best draw names for a Secret Santa drawing, using some graph theory
-tags: formatting images
-categories: sample-posts
-image: /assets/images/digraph example.png
+tags: [formatting, links]
+categories: [sample-category]
+featured: true
 ---
 
 My husband being one of eight children (half of which are married with kids) means that getting a gift for everyone in the family each Christmas isn't financially feasible. To remedy this, my MIL began the tradition of using a Secret Santa approach to gift giving: each member of the family is (randomly) assigned to give one other person a gift. This way, we know everyone is giving to one other person, and receiving from one other person.
