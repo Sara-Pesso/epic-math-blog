@@ -24,7 +24,8 @@ featured: true
     }
     body {
       margin: 0 auto;
-      max-width: 36em;
+      max-width: 100%;
+      overflow-x: auto, 
       padding-left: 50px;
       padding-right: 50px;
       padding-top: 50px;
@@ -180,11 +181,11 @@ featured: true
   </style>
 </head>
 <body>
-<header id="title-block-header">
+<!-- <header id="title-block-header">
 <h1 class="title">Rubik’s Cube Solvability using Group Theory</h1>
 <p class="author">Sara Pessognelli</p>
 <p class="date">April 2026</p>
-</header>
+</header> -->
 <h1 id="introduction">Introduction</h1>
 <p>In 1878, puzzle maker Sam Loyd released a 15-square puzzle with a
 prize of $1000 for the first person to solve it. Legend has it that
