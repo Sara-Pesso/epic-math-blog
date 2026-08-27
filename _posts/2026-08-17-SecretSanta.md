@@ -1,6 +1,10 @@
 ---
-title: "The Secret Santa Question"
+layout: post
+title: The Secret Santa Question
 date: 2026-08-17
+description: How to best draw names for a Secret Santa drawing, using some graph theory
+tags: formatting images
+categories: sample-posts
 image: /assets/images/digraph example.png
 ---
 
