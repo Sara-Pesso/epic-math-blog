@@ -17,3 +17,5 @@ There is also a complete bibliography at the end of this document!
   <iframe src="{{ '/assets/pdf/Rubik_s_Cube_Solvability_using_Group_Theory%20(2)-1.pdf' | relative_url }}" width="100%" height="100%" style="border: none;">
   </iframe>
 </div>
+
+<!-- For whatever reason this doesn't render locally, but does on the blog website, so just let it be... -->
