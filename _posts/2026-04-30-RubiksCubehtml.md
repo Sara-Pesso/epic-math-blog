@@ -1,17 +1,17 @@
 ---
 layout: post
-title: The Secret Santa Question
-date: 2026-08-17
-description: How to best draw names for a Secret Santa drawing, using some graph theory
-tags: [graph-theory, algorithms]
-categories: [blog]
+title: Rubik's Cube Solvability Using Group Theory
+date: 2026-04-30
+description: A mathematical approach to modelling the solvability of a Rubik's Cube
+tags: [group-theory, research]
+categories: [blog, research-paper]
 featured: true
 ---
 
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Sara Pessognelli" />
   <title>Rubik’s Cube Solvability using Group Theory</title>
   <style>
