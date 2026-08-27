@@ -1,3 +1,13 @@
+---
+layout: post
+title: Rubik's Cube Solvability Using Group Theory
+date: 2026-04-30
+description: A mathematical approach to modelling the solvability of a Rubik's Cube
+tags: [group-theory research]
+categories: [blog research-paper]
+featured: true
+---
+
 # Introduction
 
 In 1878, puzzle maker Sam Loyd released a 15-square puzzle with a prize
