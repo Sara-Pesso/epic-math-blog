@@ -3,8 +3,8 @@ layout: post
 title: Rubik's Cube Solvability Using Group Theory
 date: 2026-04-30
 description: A mathematical approach to modelling the solvability of a Rubik's Cube
-tags: [group-theory research]
-categories: [blog research-paper]
+tags: [group-theory, research]
+categories: [blog, research-paper]
 featured: true
 ---
 
@@ -37,18 +37,21 @@ a letter, with respect to a stationary observer [@sfunotation]. These
 are known as the 6 Basic Moves and are explained further in Figure
 [1](#tab:placeholder){reference-type="ref" reference="tab:placeholder"}.
 
-::: {#tab:placeholder}
-  --- ---------------------------------------
-   R   90 deg. cw rotation of the RIGHT face
-   L   90 deg. cw rotation of the LEFT face
-   U    90 deg. cw rotation of the UP face
-   D   90 deg. cw rotation of the DOWN face
-   F   90 deg. cw rotation of the FRONT face
-   B   90 deg. cw rotation of the BACK face
-  --- ---------------------------------------
-
-  : Table of the 6 Basic Cube Moves
-:::
+$$
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+         R&  90 deg. cw rotation of the RIGHT face\\
+         L&  90 deg. cw rotation of the LEFT face\\
+         U&  90 deg. cw rotation of the UP face\\
+         D&  90 deg. cw rotation of the DOWN face\\
+         F&  90 deg. cw rotation of the FRONT face\\
+         B&  90 deg. cw rotation of the BACK face\\
+    \end{tabular}
+    \caption{Table of the 6 Basic Cube Moves}
+    \label{tab:placeholder}
+\end{table}
+$$
 
 Note that $R', L', U', D',  F', B'$ represent the inverse of each cube
 move, or a 90 degree counter clockwise (ccw) rotation of the face.\

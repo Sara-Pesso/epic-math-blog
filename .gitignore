@@ -20,5 +20,9 @@ vendor
 __pycache__/
 *.pyc
 
+# Zips from Overleaf
+*.zip
+Rubik_s_Cube_Solvability_using_Group_Theory/
+
 # Sample stuff from al folio template
 sample_posts/

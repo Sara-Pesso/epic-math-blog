@@ -3,7 +3,7 @@ layout: post
 title: The Secret Santa Question
 date: 2026-08-17
 description: How to best draw names for a Secret Santa drawing, using some graph theory
-tags: [graph-theory algorithms]
+tags: [graph-theory, algorithms]
 categories: [blog]
 featured: true
 ---
