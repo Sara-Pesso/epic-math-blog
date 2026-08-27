@@ -1,14 +1,10 @@
 ---
 layout: page
 title: Rubik's Cube Solvability Using Group Theory
-date: 2026-04-30
 description: A mathematical approach to modelling the solvability of a Rubik's Cube
-img: assets/img/12.jpg
-importance: 1
-category: [research-project, research-paper]
-tags: [group-theory, research]
-related_publications: true
+img: /assets/img/12.jpg
 ---
+
 
 <head>
   <meta charset="utf-8" />
