@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Nothin' to it but to do it! - Ronnie Coleman
+subtitle: "\"Ain't nothin' to it but to do it!\" - Ronnie Coleman"
 
 profile:
   align: right
