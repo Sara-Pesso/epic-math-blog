@@ -6,6 +6,19 @@ img: /assets/img/rubikscube_project/rubiks_tile.png
 category: work
 ---
 
+Project completed for graduate level group theory class.
+
+All Python scripts referenced in this project can be found on this [Github Repo](https://github.com/Sara-Pesso/rubiks-cube-group-theory).
+
+Below is a downloadable PDF version of this project, rendered in LaTeX. There is also a complete bibliography at the end of this document!
+
+<div class="embed-responsive" style="height: 80vh;">
+  <iframe src="{{ '/assets/pdf/Rubik_s_Cube_Solvability_using_Group_Theory%20(2)-1.pdf' | relative_url }}" width="100%" height="100%" style="border: none;">
+  </iframe>
+</div>
+
+<!-- For whatever reason this doesn't render locally, but does on the blog website, so just let it be... -->
+
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -1165,7 +1178,7 @@ id="fig:ru_up" data-label="fig:ru_up"></span></p>
 <div class="minipage">
 <p><div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="a/assets/img/rubikscube_project/ru_down.JPG" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/rubikscube_project/ru_down.JPG" class="img-fluid rounded z-depth-1" %}
     </div>
 </div> <span
 id="fig:ru_d" data-label="fig:ru_d"></span></p>
@@ -1223,7 +1236,3 @@ Cubes using the same group theory!</p>
 <p>All code is available here: <a
 href="https://github.com/Sara-Pesso/rubiks-cube-group-theory"
 class="uri">https://github.com/Sara-Pesso/rubiks-cube-group-theory</a>.</p>
-
-
-
-</body>
