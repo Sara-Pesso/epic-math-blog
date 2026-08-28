@@ -6,7 +6,7 @@ img: /assets/img/rubikscube_project/rubiks_tile.png
 category: work
 ---
 
-Project completed for graduate level group theory class.
+Project completed for graduate level group theory class (MAT 523) at the University of Southern Mississippi.
 
 All Python scripts referenced in this project can be found on this [Github Repo](https://github.com/Sara-Pesso/rubiks-cube-group-theory).
 
@@ -16,8 +16,6 @@ Below is a downloadable PDF version of this project, rendered in LaTeX. There is
   <iframe src="{{ '/assets/pdf/Rubik_s_Cube_Solvability_using_Group_Theory%20(2)-1.pdf' | relative_url }}" width="100%" height="100%" style="border: none;">
   </iframe>
 </div>
-
-<!-- For whatever reason this doesn't render locally, but does on the blog website, so just let it be... -->
 
 <head>
   <meta charset="utf-8" />
