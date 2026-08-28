@@ -675,13 +675,13 @@ as desired.</p>
 of Cube Theory.</h1>
 <h2 id="cube-orientation.">Cube Orientation.</h2>
 <figure id="fig:cube1" data-latex-placement="h">
-<img src="assets/img/rubikscube_project/cube_orientation1.png" style="width:75.0%" />
+<img src="epic-math-blog/assets/img/rubikscube_project/cube_orientation1.png" style="width:75.0%" />
 <figcaption>Visualizing the 8 corner positions and 12 edge positions on
 the 3x3 Rubik’s Cube <span class="citation"
 data-cites="sfunotation"></span>.</figcaption>
 </figure>
 <figure id="fig:cube2" data-latex-placement="h">
-<img src="/assets/img/rubikscube_project/cube_orientation2.png" style="width:75.0%" />
+<img src="assets/img/rubikscube_project/cube_orientation2.png" style="width:75.0%" />
 <figcaption>Visualizing the orientation for the corner and edge facelets
 <span class="citation" data-cites="sfunotation"></span>.</figcaption>
 </figure>
