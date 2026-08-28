@@ -379,7 +379,11 @@ Pocket Cube represents the corners of the 3x3 Rubik’s Cube. Therefore,
 is also non-abelian for the 3x3 Rubik’s Cube.</p>
 <figure id="fig:UR">
 <div class="minipage">
-<p><img src="epic-math-blog/assets/img/rubikscube_project/RU.JPG" alt="image" /> <span id="fig:RU"
+<p><div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/rubikscube_project/RU.JPG" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div><span id="fig:RU"
 data-label="fig:RU"></span></p>
 </div>
 <div class="minipage">
