@@ -1,12 +1,17 @@
 ---
 layout: page
-title: Rubik's Cube Solvability Using Group Theory
-description: A group theory approach to modeling the solvability of a Rubik's Cube
-img: /assets/img/rubikscube_project/rubiks_tile.png
+title: Counting Processes, Regression, and Bayesian Methods for Epidemiology
+description: An application of Bayesian statistical methods on the spread of epidemics, with a focus on the COVID-19 pandemic and 2014 to present Ebola epidemics in Africa. 
+img: /assets/img/epidemics_projects/thumbnail-epidemic.png
 category: work
 ---
 
-<!DOCTYPE html>
+Project completed for graduate level statistics class (MAT 721) at the Johns Hopkins University as part of the Applied & Computational Mathematics Graduate Certificate.
+
+All Python scripts referenced in this project can be found on this [Github Repo](https://github.com/Sara-Pesso/Research-Project-Pessognelli).
+
+Below is a downloadable PDF version of this project, rendered in LaTeX. There is also a complete bibliography at the end of this document!
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8" />
@@ -216,7 +221,7 @@ Bayes’ classifiers and Bayesian logistic regression for prediction of
 disease.</p>
 </div>
 </header>
-<p><strong>Prompt:</strong><br />
+<p><br />
 <br />
 </p>
 <h1 id="modelling-the-spread-of-disease.">Modelling the Spread of
@@ -349,7 +354,11 @@ and
 are frequently determined by a trial and error method <span
 class="citation" data-cites="sir4"></span>.</p>
 <figure data-latex-placement="h">
-<img src="./SIR_example.png" style="width:50.0%" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/SIR_example.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption aria-hidden="true"></figcaption>
 </figure>
 <p>Looking ahead to the section where we work out
@@ -397,7 +406,11 @@ The CDC data was transformed this way and
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">X(i)</annotation></semantics></math>
 for the various US counties of interest are plotted below:</p>
 <figure data-latex-placement="h">
-<img src="./all_newcases.png" style="width:100.0%" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/all_newcases.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>New Cases Major US Counties, by day</figcaption>
 </figure>
 <p>What’s interesting about each graph, is that even though three of
@@ -461,12 +474,22 @@ individual counties, the Ebola data is totalled across all three
 countries: Guinea, Sierra Leone, and Liberia.</p></li>
 </ul>
 <figure data-latex-placement="h">
-<img src="./ebola_total_cases.png" style="width:73.0%" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/ebola_total_cases.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<!-- <img src="./ebola_total_cases.png" style="width:73.0%" /> -->
 <figcaption>Total Confirmed Ebola Cases in West Africa (2014-16), using
 the raw CDC data set.</figcaption>
 </figure>
 <figure data-latex-placement="h">
-<img src="./ebola_xn_raw.png" style="width:73.0%" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/ebola_xn_raw.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<!-- <img src="./ebola_xn_raw.png" style="width:73.0%" /> -->
 <figcaption>Newly Confirmed Ebola Cases in West Africa (2014-16), using
 the raw CDC data set.</figcaption>
 </figure>
@@ -945,7 +968,12 @@ for each county is with respect to the first detected case in that
 county. The data looks similar in shape, but note the peaks are
 higher:</p>
 <figure data-latex-placement="h">
-<img src="./all_newcases_5days.png" style="width:115.0%" />
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/all_newcases_5days.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<!-- <img src="./all_newcases_5days.png" style="width:115.0%" /> -->
 <figcaption><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">X(n)</annotation></semantics></math>:
 New Cases Major US Counties, n = 5 days</figcaption>
 </figure>
@@ -999,7 +1027,12 @@ Those
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>y</mi><mi>k</mi></msub><annotation encoding="application/x-tex">y_k</annotation></semantics></math>
 can be seen in Figure 8.</p>
 <figure data-latex-placement="h">
-<img src="./R0_estimations.png" style="width:50.0%" />
+<!-- <img src="./R0_estimations.png" style="width:50.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/R0_estimations.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>y</mi><mi>k</mi></msub><annotation encoding="application/x-tex">y_k</annotation></semantics></math>:
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>λ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{\lambda}</annotation></semantics></math>
 estimations by generation, by county, for n = 5 days</figcaption>
@@ -1094,7 +1127,12 @@ This means,
 where, to account for the missing generations,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>≥</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">k \geq 5</annotation></semantics></math>.</p>
 <figure data-latex-placement="h">
-<img src="./ebola_xn_py.png" style="width:75.0%" />
+<!-- <img src="./ebola_xn_py.png" style="width:75.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/ebola_xn_py.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">X(n)</annotation></semantics></math>,
 after making reasonable assumptions about the CDC data.</figcaption>
 </figure>
@@ -1376,7 +1414,12 @@ before and after lock-downs is actually different in subsequent
 sections.</p>
 <h3 id="ebola.-1">Ebola.</h3>
 <figure data-latex-placement="h">
-<img src="./Ebola_linearization1_genALL.png" style="width:75.0%" />
+<!-- <img src="./Ebola_linearization1_genALL.png" style="width:75.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/Ebola_linearization1_genALL.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><msub><mi>R</mi><mn>0</mn></msub><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{R_0}</annotation></semantics></math>
 estimation for for all generations (3/25/2014-4/13/2016)</figcaption>
 </figure>
@@ -1776,7 +1819,12 @@ We can see below the spot estimates of
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>e</mi></msub><annotation encoding="application/x-tex">R_e</annotation></semantics></math>
 over time in each county:</p>
 <figure data-latex-placement="h">
-<img src="./all spot ests AB testing.png" style="width:75.0%" />
+<!-- <img src="./all spot ests AB testing.png" style="width:75.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/all%20spot%20ests%20AB%20testing.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><msub><mi>R</mi><mi>e</mi></msub><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{R_e}</annotation></semantics></math>
 estimation for for all generations during COVID-19 Pandemic
 (1/22/20-7/27/20)</figcaption>
@@ -1845,19 +1893,39 @@ high level, to offer some intuition.</p>
 <h3 id="discussion-of-covid-19-results.">Discussion of COVID-19
 Results.</h3>
 <figure data-latex-placement="h">
-<img src="./AB_berks.png" style="width:100.0%" />
+<!-- <img src="./AB_berks.png" style="width:100.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/AB_berks.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>A/B Testing Berks, PA</figcaption>
 </figure>
 <figure data-latex-placement="h">
-<img src="./AB_phl.png" style="width:100.0%" />
+<!-- <img src="./AB_phl.png" style="width:100.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/AB_phl.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>A/B Testing Philadelphia, PA</figcaption>
 </figure>
 <figure data-latex-placement="h">
-<img src="./AB_nyc.png" style="width:100.0%" />
+<!-- <img src="./AB_nyc.png" style="width:100.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/AB_nyc.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>A/B Testing Manhattan, NY</figcaption>
 </figure>
 <figure data-latex-placement="h">
-<img src="./AB_la.png" style="width:100.0%" />
+<!-- <img src="./AB_la.png" style="width:100.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/AB_la.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>A/B Testing Los Angeles, CA</figcaption>
 </figure>
 <p>We can see from our spot estimates of
@@ -2130,7 +2198,12 @@ evidence for the efficacy of lock-downs as a measure for reducing the
 spread of COVID-19.</p>
 <h3 id="discussion-of-ebola-results.">Discussion of Ebola Results.</h3>
 <figure data-latex-placement="h">
-<img src="./Ebola_AB.png" style="width:100.0%" />
+<!-- <img src="./Ebola_AB.png" style="width:100.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/Ebola_AB.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>A/B Testing Ebola Epidemic, West Africa,
 2013-2016</figcaption>
 </figure>
@@ -2531,8 +2604,13 @@ sets and accuracy will be our final fit metric.</p>
 <h3 id="heart-failure-risk-factor-results.-1">Heart Failure Risk Factor
 Results.</h3>
 <figure data-latex-placement="h">
-<img src="./heartdisease_bLogReg_posteriorSummaries.png"
-style="width:95.0%" />
+<!-- <img src="./heartdisease_bLogReg_posteriorSummaries.png"
+style="width:95.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/heartdisease_bLogReg_posteriorSummaries.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>Heart Failure Bayesian Logistic Regression Parameter
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>,</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\beta, a</annotation></semantics></math>
 Posterior Distribution Summaries.</figcaption>
@@ -2584,7 +2662,12 @@ parameter in order to see better convergence.</p>
 <h3 id="covid-19-severity-risk-factors-results.">COVID-19 Severity Risk
 Factors Results.</h3>
 <figure data-latex-placement="h">
-<img src="./BLogReg_COVID2.png" style="width:95.0%" />
+<!-- <img src="./BLogReg_COVID2.png" style="width:95.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/BLogReg_COVID2.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>COVID-19 Severity Bayesian Logistic Regression Parameter
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>,</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\beta, a</annotation></semantics></math>
 Posterior Distribution Summaries.</figcaption>
@@ -2748,7 +2831,12 @@ pressure measurement data in to binary categorical variables, where
 data-cites="hc_to_hbp"></span>.<br />
 </p>
 <figure data-latex-placement="h">
-<img src="./BBN3_cpds.png" style="width:95.0%" />
+<!-- <img src="./BBN3_cpds.png" style="width:95.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/BBN3_cpds.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>CPDs for DAG 1.</figcaption>
 </figure>
 <p>We have already established
@@ -2792,7 +2880,12 @@ causal cycles, and at least in the case of "High Cholesterol"
 it still satisfies the BDPC. The resultant CPD table is in Figure
 27.</p>
 <figure data-latex-placement="h">
-<img src="./BBN5_cpds.png" style="width:95.0%" />
+<!-- <img src="./BBN5_cpds.png" style="width:95.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/BBN5_cpds.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>CPDs for DAG 2.</figcaption>
 </figure>
 <h2 id="structure-search-methods.">Structure Search Methods.</h2>
@@ -2849,7 +2942,12 @@ variables in DAG 2 using PGMpy in Python yields:</p>
 28. The DAG from exhaustive search is on the left, and Hill Climb search
 on the right.</p>
 <figure data-latex-placement="h">
-<img src="./proposed_DAGS.png" style="width:95.0%" />
+<!-- <img src="./proposed_DAGS.png" style="width:95.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/proposed_DAGS.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>Proposed DAGs from Exhaustive Search &amp; Hill Climb
 Search, respectively.</figcaption>
 </figure>
@@ -2874,7 +2972,12 @@ data-cites="hc_hbp_to_hd"></span> <span class="citation"
 data-cites="hd_ecg"></span> <span class="citation"
 data-cites="angina"></span>.</p>
 <figure data-latex-placement="h">
-<img src="./BNN_5Nodes.png" style="width:95.0%" />
+<!-- <img src="./BNN_5Nodes.png" style="width:95.0%" /> -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/epidemics_projects/BNN_5Nodes.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 <figcaption>Probable DAG 2.</figcaption>
 </figure>
 <p>When we compare the BIC scores of these three DAGs we see:</p>
