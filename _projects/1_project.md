@@ -3,8 +3,8 @@ layout: page
 title: Rubik's Cube Solvability Using Group Theory
 description: A mathematical approach to modelling the solvability of a Rubik's Cube
 img: /assets/img/12.jpg
+category: work
 ---
-
 
 <head>
   <meta charset="utf-8" />
