@@ -12,6 +12,11 @@ All Python scripts referenced in this project can be found on this [Github Repo]
 
 Below is a downloadable PDF version of this project, rendered in LaTeX. There is also a complete bibliography at the end of this document!
 
+<div class="embed-responsive" style="height: 80vh;">
+  <iframe src="{{ '/assets/pdf/Research_Project_721_Pessognelli_FINAL.pdf' | relative_url }}" width="100%" height="100%" style="border: none;">
+  </iframe>
+</div>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8" />
