@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Rubik's Cube Solvability Using Group Theory
-description: A mathematical approach to modelling the solvability of a Rubik's Cube
-img: /assets/img/12.jpg
+description: A group theory approach to modeling the solvability of a Rubik's Cube
+img: /assets/img/rubikscube_project/rubiks_tile.png
 category: work
 ---
 
@@ -379,11 +379,11 @@ Pocket Cube represents the corners of the 3x3 Rubik’s Cube. Therefore,
 is also non-abelian for the 3x3 Rubik’s Cube.</p>
 <figure id="fig:UR">
 <div class="minipage">
-<p><img src="./RU.JPG" alt="image" /> <span id="fig:RU"
+<p><img src="/assets/img/rubikscube_project/RU.JPG" alt="image" /> <span id="fig:RU"
 data-label="fig:RU"></span></p>
 </div>
 <div class="minipage">
-<p><img src="./UR.JPG" alt="image" /> <span id="fig:UR"
+<p><img src="/assets/img/rubikscube_project/UR.JPG" alt="image" /> <span id="fig:UR"
 data-label="fig:UR"></span></p>
 </div>
 </figure>
@@ -675,13 +675,13 @@ as desired.</p>
 of Cube Theory.</h1>
 <h2 id="cube-orientation.">Cube Orientation.</h2>
 <figure id="fig:cube1" data-latex-placement="h">
-<img src="./cube_orientation1.png" style="width:75.0%" />
+<img src="/assets/img/rubikscube_project/cube_orientation1.png" style="width:75.0%" />
 <figcaption>Visualizing the 8 corner positions and 12 edge positions on
 the 3x3 Rubik’s Cube <span class="citation"
 data-cites="sfunotation"></span>.</figcaption>
 </figure>
 <figure id="fig:cube2" data-latex-placement="h">
-<img src="./cube_orientation2.png" style="width:75.0%" />
+<img src="/assets/img/rubikscube_project/cube_orientation2.png" style="width:75.0%" />
 <figcaption>Visualizing the orientation for the corner and edge facelets
 <span class="citation" data-cites="sfunotation"></span>.</figcaption>
 </figure>
@@ -715,12 +715,12 @@ the yellow-green-red corner cube is now in cubicle 3, with orientation 2
 data-reference="fig:moveB">4</a>).</p>
 <figure id="fig:moveB">
 <div class="minipage">
-<p><img src="./pocket_orientation.JPG" style="width:50.0%"
+<p><img src="/assets/img/rubikscube_project/pocket_orientation.JPG" style="width:50.0%"
 alt="image" /> <span id="fig:2x2cube"
 data-label="fig:2x2cube"></span></p>
 </div>
 <div class="minipage">
-<p><img src="./moveB_ex.JPG" style="width:50.0%" alt="image" /> <span
+<p><img src="/assets/img/rubikscube_project/moveB_ex.JPG" style="width:50.0%" alt="image" /> <span
 id="fig:moveB" data-label="fig:moveB"></span></p>
 </div>
 </figure>
@@ -871,11 +871,11 @@ data-reference-type="ref" data-reference="fig:2x2cube_ori">5</a>, which
 shows a 3-D Pocket Cube with it’s facelets labeled.</p>
 <figure id="fig:2x2cube_ori">
 <div class="minipage">
-<p><img src="./CUBE LAYOUT2.png" style="width:100.0%" alt="image" />
+<p><img src="/assets/img/rubikscube_project/CUBE LAYOUT2.png" style="width:100.0%" alt="image" />
 <span id="fig:cubelayout" data-label="fig:cubelayout"></span></p>
 </div>
 <div class="minipage">
-<p><img src="./pocket_orientation.JPG" style="width:50.0%"
+<p><img src="/assets/img/rubikscube_project/pocket_orientation.JPG" style="width:50.0%"
 alt="image" /> <span id="fig:2x2cube_ori"
 data-label="fig:2x2cube_ori"></span></p>
 </div>
@@ -968,7 +968,7 @@ cubicles 1 and 2 and 3 and 7 cycle and rotate, while the rest of the
 cube remains unchanged <span class="citation"
 data-cites="sweeney2022"></span>.</p>
 <figure id="fig:randu" data-latex-placement="h">
-<img src="./randu.png" style="width:100.0%" />
+<img src="/assets/img/rubikscube_project/randu.png" style="width:100.0%" />
 <figcaption>Cubes permuted by both
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>R</mi><mo>,</mo><mi>U</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[R,U]</annotation></semantics></math>.</figcaption>
 </figure>
@@ -1121,11 +1121,11 @@ data-reference-type="ref" data-reference="fig:ru_d">7</a> we can
 calculate this quantity.</p>
 <figure id="fig:ru_d">
 <div class="minipage">
-<p><img src="./ru_up.JPG" style="width:50.0%" alt="image" /> <span
+<p><img src="/assets/img/rubikscube_project/ru_up.JPG" style="width:50.0%" alt="image" /> <span
 id="fig:ru_up" data-label="fig:ru_up"></span></p>
 </div>
 <div class="minipage">
-<p><img src="./ru_down.JPG" style="width:50.0%" alt="image" /> <span
+<p><img src="/assets/img/rubikscube_project/ru_down.JPG" style="width:50.0%" alt="image" /> <span
 id="fig:ru_d" data-label="fig:ru_d"></span></p>
 </div>
 </figure>
