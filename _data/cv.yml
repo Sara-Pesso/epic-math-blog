@@ -1,10 +1,10 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Sara Pessognelli
+  label: Mathematics Enthusiast 
+  email: s.pessognelli@outlook.com
+  location: Albemarle County, Virginia
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: Current Master's student, with experience in scientific software programming and operation analysis.
 
   social_networks:
     - network: X
@@ -15,26 +15,39 @@ cv:
       username: example
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
+    street: ""
+    city: Albemarle County
+    region: Virginia
+    postalCode: ""
+
     countryCode: US
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
+      - institution: University of Southern Mississippi
+        location: Hattiesburg, Mississippi
         url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
+        area: Computational Mathematics & Data Applications
+        studyType: Masters of Science
+        start_date: 2026
+        end_date: 2027
         score: ""
-        courses: "Theory of Relativity"
+        courses: "Number Theory, Modern Algebra"
         highlights:
           - Description 1.
           - Description 2.
+
+      - institution: Johns Hopkins University
+        location: Baltimore, Maryland
+        area: Applied & Computational Mathematics
+        studyType: Graduate Certificate
+        start_date: 2022
+        end_date: 2024
+        score: ""
+        courses: "Probability & Stochastic Process I & II, Matrix Theory, Statistical Methods & Data Analysis"
+        highlights:
+          - Graduate Grader & Assistant
+          - [Counting Processes, Regression, and Bayesian Methods for Epidemiology](https://sara-pesso.github.io/epic-math-blog/projects/epidemiology-stats/)
 
       - institution: Eidgenössische Technische Hochschule
         location: Zurich, Switzerland
