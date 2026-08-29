@@ -15,7 +15,7 @@ cv:
       username: example
 
   address:
-    street: ""
+    street: Charlottesville
     city: Albemarle County
     region: Virginia
     postalCode: ""
@@ -28,14 +28,13 @@ cv:
         location: Hattiesburg, Mississippi
         url: https://www.uzh.ch/
         area: Computational Mathematics & Data Applications
-        studyType: Masters of Science
+        studyType: Master of Science
         start_date: 2026
         end_date: 2027
-        score: ""
+        score: "4.0 GPA"
         courses: "Number Theory, Modern Algebra"
         highlights:
-          - Description 1.
-          - Description 2.
+          - <a href="https://sara-pesso.github.io/epic-math-blog/projects/1_project/">Rubik's Cube Solvability Using Group Theory</a>
 
       - institution: Johns Hopkins University
         location: Baltimore, Maryland
@@ -43,160 +42,186 @@ cv:
         studyType: Graduate Certificate
         start_date: 2022
         end_date: 2024
-        score: ""
+        score: "4.0 GPA"
         courses: "Probability & Stochastic Process I & II, Matrix Theory, Statistical Methods & Data Analysis"
         highlights:
           - Graduate Grader & Assistant
-          - [Counting Processes, Regression, and Bayesian Methods for Epidemiology](https://sara-pesso.github.io/epic-math-blog/projects/epidemiology-stats/)
+          - <a href="https://sara-pesso.github.io/epic-math-blog/projects/epidemiology-stats/">Counting Processes, Regression, and Bayesian Methods for Epidemiology</a>
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: Virginia Military Institute
+        location: Lexington, Virginia
+        area: Applied Mathematics
+        studyType: Bachelor of Science 
+        start_date: 2016
+        end_date: 2020
         highlights:
-          - Description 1.
-          - Description 2.
+          - French Medal Winner (awarded to highest performing applied mathematics student of each class)
+          - Distinguished Military Graduate
+          - Applied & Industrial Mathematics Internship
+          - Summer Undergraduate Research Internship x 2 
+          - Honors Thesis -- "Causal statements in observational data with a focus on the study of terrorist attacks"
+
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: GAMA-1 Technologies (NOAA Contractor)
+        position: Scientific Software Engineer
+        location: Greenbelt, Maryland
+        start_date: 2024
+        end_date: 2026
+        summary: Migrating and integrating novel weather applications into a deployed cloud environment used by NOAA, NWS, and other federal entities. 
         highlights:
-          - Relativity
-          - Description 2.
+          - Experience with ASOS, MiRS, AWIPS, SkyCover, and many more NOAA weather monitoring algorithms. 
+          - Experience with software used by JPSS, GOES, and NEON's Quicksounder satellites. 
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Lockheed-Martin
+        position: Operations Analyst
+        location: Denver, CO
+        start_date: 2020
+        end_date: 2024
         highlights:
-          - Description 1.
-          - Description 2.
+          - Experience building physics based weather and RF communications modelling software in Python and Fortran90.
+          - Employed data analysis and machine learning techniques on to resultant generated data.
+          - IRAD participation on a project to create a RF communications recommendation service using genetic algorithms and simulated annealing. 
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
+      - company: Johns Hopkins Whiting School of Engineering
+        position: Graduate Grader 
+        location: Baltimore, Maryland
+        start_date: 2023
+        end_date: 2025
 
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
+      - company: United States Army Reserve (USAR)
+        position: Engineer Officer (FCCME)
+        location: Ft. Eustis, Virginia
+        start_date: 2020
+        end_date: 2026
 
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+    # Volunteer:
+    #   - company: People's Climate March
+    #     position: Lead Organizer
+    #     location: Zurich, Switzerland
+    #     start_date: 2014-04-01
+    #     end_date: 2015-07-01
+    #     summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+    #     highlights:
+    #       - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
+    #       - "Men of the year 2014 by Time magazine"
 
     Awards:
-      - title: Nobel Prize in Physics
+      - title: Extraordinary Engineering & Technology Award (EETA)
         authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+          - "Lockheed-Martin"
+        date: 2022
+        awarder: Lockheed-Martin
+        url: ""
+        summary: Awarded to the members of our team working on the Space Development Agency (SDA) PDR, for technical excellence and persistent dedication to high quality modeling, analysis, & delivery of results to the customers in an evolving and time-constrained schedule.
 
-      - title: Max Planck Medal
+      - title: French Medal
         authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - "Virginia Military Institute Applied Mathematics Department"
+        date: 2020
+        awarder: Virginia Military Institute Applied Mathematics Department
+        summary: Awarded to the member of the graduating class with the highest proficiency in mathematics.
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+    # Publications:
+    #   - title: Zur Elektrodynamik bewegter Körper
+    #     authors:
+    #       - Albert Einstein
+    #     publisher: Annalen der Physik
+    #     releaseDate: 1905-06-30
+    #     url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
+    #     summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+    #   - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+    #     authors:
+    #       - Albert Einstein
+    #     publisher: Annalen der Physik
+    #     releaseDate: 1905-03-18
+    #     url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
+    #     summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+    #   - title: Die Grundlage der allgemeinen Relativitätstheorie
+    #     authors:
+    #       - Albert Einstein
+    #     publisher: Annalen der Physik
+    #     releaseDate: 1916-03-20
+    #     url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
+    #     summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
 
     Skills:
-      - name: Physics
-        level: Master
+      - name: Mathematics
+        level: Proficient
         icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
+        keywords: "Probability & Stochastic Processes, Bayesian Statistics, Machine Learning, Deep Learning, Matrix Theory, Linear Algebra, Number Theory, Modern Algebra, Chaos, Operations Research, Calculus, Differential Equations, Mathematical & Dynamic Programming"
+      - name: Modelling & Simulation
+        level: Proficient
+        icon: fa-solid fa-hashtag
+        keywords: "RF communications, IEEE weather attenuations, STK, Proportional Navigation"
       - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+        level: Proficient
+        icon: fa-solid fa-hashtag
+        keywords: "Statistical Mechanics, Classical Mechanics, Modern Physics, Kinetics"
+      - name: Python
+        level: Proficient
+        icon: fa-solid fa-hashtag
+        keywords: "PyTorch, PyMC, NetworkX, Sci-Kit Learn, Keras, Tensorflow, itur"
+      - name: Programming & CS
+        level: Proficient
+        icon: fa-solid fa-hashtag
+        keywords: "Fortran90, R, MATLAB, Excel, C++, PuTTY, Docker, AWS, Git"     
+
+    # Languages:
+    #   - name: German
+    #     summary: "Native speaker"
+
+    #   - name: English
+    #     summary: "Fluent"
+
+    # Interests:
+    #   - name: Physics
+    #     icon: fa-solid fa-tag
+    #     keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
+      - name: STK Level 1 Certification 
+        date: 2019
+        issuer: Ansys
         icon: fa-solid fa-location-dot
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
+      - name: MATLAB Machine Learning
+        date: 2020
+        issuer: Mathworks
         icon: fa-solid fa-tag
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+      - name: MATLAB Deep Learning 
+        date: 2020
+        issuer: Mathworks
+        icon: fa-solid fa-tag
+      
+      - name: Introduction to Deep Learning with PyTorch  
+        date: 2023
+        issuer: Udemy
+        icon: fa-solid fa-tag
 
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+    # Projects:
+    #   - name: Quantum Computing
+    #     summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+    #     highlights:
+    #       - Quantum Teleportation
+    #       - Quantum Cryptography
+    #     start_date: 2018-01-01
+    #     end_date: 2018-01-01
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    #   - name: 
+    #   - name: Arduino Weather Station
+    #   - name: Proportional Navigation
+    #   - name: Data 
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+
+    # References:
+    #   - name: Professor John Doe
+    #     icon: fa-solid fa-laptop
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+
+    #   - name: Professor Jane Smith
+    #     icon: fa-solid fa-thumbtack
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
