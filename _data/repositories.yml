@@ -1,14 +1,15 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Sara-Pesso
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Sara-Pesso/rubiks-cube-group-theory
+  - Sara-Pesso/Research-Project-Pessognelli
+  - Sara-Pesso/satellites
+  - Sara-Pesso/dynamic-programming
+  - Sara-Pesso/AIML
+  - Sara-Pesso/Angular-Optimization
+  - Sara-Pesso/secret-santa-app
+  - Sara-Pesso/prayer-partners
+
