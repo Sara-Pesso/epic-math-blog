@@ -83,8 +83,61 @@ print(kthFibonacci_Recursion(5))
 
 </div>
 
+As we can see, in the case of calculating Fibonacci numbers because each function call, $F(n)$, leads to the function being recursively called twice more, $F(n-1)$ and $F(n-2)$. This means we are calling the function $2^n$ times, and therefore the recursive solution has time complexity of $O(2^n)$. For the uninitiated to Big-O notation, this is not particularly good and means that, though a valid way to find the solution, it is a pretty slow algorithm.
+
+But, like all things in life, there is a trade off. Space complexity is determined by the depth of just the *callstack* at it's deepest point. Looking at te $F(5)$ tree and counting the longest branch, we can see there are 5 function calls. In fact, this is true generally for the recursive solution to the Fibonacci calculation: the storage complexity is only $O(n)$. This isn't too bad! We don't need very much memory at all for this function, the trade off being we are only getting $F(n)$-- all the subproblem calculations for $F(i), \forall 0 < i < n$ are lost once the function call terminates. 
+
+Next, we'll look at some ways to improve the time complexity, with some trade offs in terms of storage complexity because they store the results of the subproblems, too. 
+
 ## Memoization (Top-Down)
 
 You can probably already see some redundancies in calculations looking at the $F(5)$ tree calculations. When we use recursions, we are calculating $F(3)$ twice, and every time we calculate $F(3)$, we calculate $F(2)$ once and $F(1)$ twice, and so on and so forth. 
+
+What if we were able to save the results of these subproblems, instead of recalculating them repeatedly?
+
+Doing this from the top-down--  that is, in Fibonacci terms, starting with $F(n)$ and working down the tree to $F(1)$-- and caches the results of each subproblem in a table to be pulled from later if the subproblem is revisited in a recursive algorithm (like Fibonacci numbers), is called **memoization**. Frequently such a table is referred to as a *memoization table* or *DP (dynamic programming) table*. Looking at the pseudocode for this, we'd have something like
+
+1. Initialize the DP table (an empty $1xn$ vector). Where, $n$ is Fibonacci index of interest and NaN is a value that indicates the table hasn't yet been filled for a specific index:
+$$dp = [\bm{NaN}]^{1 x n}$$
+2. Create the basis and termination criteria. This is the same as in the recursive approach: if we recurse to $n \leq 1$, begin working back up the callstack. 
+3. Check the DP table for the result of the subproblem
+    - if the subproblem has been solved before and we have the result (i.e.,$dp(i) \not = NaN$), return that value.
+    - if the subproblem has not been solved before (i.e., $dp[i] = NaN$), continue solving via recursion until we hit a solved subproblem (or the basis), then save in the DP table and return the result. 
+
+In Python,
+
+<div class="al-marimo-inline" markdown="1">
+
+```python
+from math import *
+
+def kthFibonacciNumber_Memoization(k):
+    dp = [nan] * (k + 1)
+
+    def kthFibonacciUtil_Memoization(k, dp):
+        # Basis: k <= 1 
+        if k <=1: 
+            return k
+
+        # Case k > 1
+        if dp[k] is not nan:
+            # if we've already calculated/stored the kth fibonacci number
+            return dp[k]
+
+        # if we have NOT already calculated/stored the kth fibonacci number
+        dp[k] = kthFibonacciUtil_Memoization(k - 1, dp) + kthFibonacciUtil_Memoization(k - 2, dp)
+
+        return dp[k]
+    return kthFibonacciUtil_Memoization(k, dp)
+
+print(kthFibonacciNumber_Memoization(7))
+```
+
+</div>
+
+So, the basic trade off here is a little more storage complexity is required in order to save the results of each subproblem, but in return we save on time complexity. For long recursive problems, say calculating $F(1,000,000)$, this is an important trade off to make as it will drastically decrease the time your algorithm needs to run. 
+
+In terms of Big-O notation, 
+
 
 ## Tabulation (Bottom-Up)
