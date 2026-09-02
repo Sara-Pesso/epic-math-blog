@@ -33,7 +33,9 @@ Let's jump into it by exploring the Fibonacci sequence!
 A quick overveiw of what the Fibonacci sequence is; from Wikipedia: 
 > In mathematics, the Fibonacci sequence is a sequence in which each element is the sum of the two elements that precede it.
 So, starting with the smallest two natural numbers (that is the positive reals, denoted $\mathbb{N}$)
-$$\{0,1,1,2,3,5,8,13,21, 34\dots\}$$
+
+
+$$F = \{0,1,1,2,3,5,8,13,21, 34\dots\}$$
 
 Is there an easy way to calculate the $n^{th}$ Fibonacci number? For large numbers, we don't want to manually do that many calculations. Even on a computer, calculating say, the $4,000,000^{th}$ Fibonacci number can be costly in both time and space. That's where DP can become a very useful tool. 
 
