@@ -6,6 +6,7 @@ description: A quick look into some basic dynamic programming approaches, explor
 tags: [dp-for-dummies, algorithms]
 categories: [blog]
 featured: true
+marimo: true
 ---
 ## Introduction
 
@@ -34,7 +35,6 @@ A quick overveiw of what the Fibonacci sequence is; from Wikipedia:
 > In mathematics, the Fibonacci sequence is a sequence in which each element is the sum of the two elements that precede it.
 So, starting with the smallest two natural numbers (that is the positive reals, denoted $\mathbb{N}$)
 
-Or, 
 $$F = \{0,1,1,2,3,5,8,13,21, 34\dots\}$$
 
 Is there an easy way to calculate the $n^{th}$ Fibonacci number? For large numbers, we don't want to manually do that many calculations. Even on a computer, calculating say, the $4,000,000^{th}$ Fibonacci number can be costly in both time and space. That's where DP can become a very useful tool. 
@@ -53,12 +53,31 @@ We can divide the cases this way, because $\forall i > 1$, $F(i)$ is a repeated 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/dp-blog/fib-recursion-tree.png" class="img-fluid w-50 rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/dp-blog/fib-recursion-tree.png" class="img-fluid w-80 rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     Visualization of calculating $F(5)$ using a graph.
 </div>
+
+We can see here how every branch of the tree eventually gets down to the $F(0)$ and $F(1)$ basis. Your computer handles this by going down a **callstack** in the *Forward Phase*, which keeps track of every subproblem in the recursion, all the way to basis on the branch, Then, upon reaching the basis, the recursive program knows to terminate (because we've told it to) and will move on to "going down" the next branch, until every subproblem has been fully solved. 
+
+Once the Forward Phase is complete, the *Unwinding Phase* begins. This is the computer "coming back up" the callstack,and solving all the functions it's created (in the case of the Fibonacci sequence, basically this would look like a summation of a bunch of 1s, depending on the $n^{th}$ Fibonacci number we are calculating). The program then terminates, returning the $n^{th}$ Fibonacci number as the user defined. 
+
+In Python, that would look something like this:
+```python
+def kthFibonacci_Recursion(n):
+    
+    # base case
+    if n <= 1:
+        return n
+      
+    # sum of the two preceding 
+    # Fibonacci numbers
+    return kthFibonacci_Recursion(n - 1) + kthFibonacci_Recursion(n - 2)
+
+print(kthFibonacci_Recursion(5))
+```
 
 ## Memoization (Top-Down)
 
