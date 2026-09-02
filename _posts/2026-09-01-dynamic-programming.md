@@ -53,7 +53,7 @@ We can divide the cases this way, because $\forall i > 1$, $F(i)$ is a repeated 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/dp-blog/fib-recursion-tree.png" class="img-fluid w-80 rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/dp-blog/fib-recursion-tree.png" class="img-fluid w-70 rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -67,29 +67,18 @@ Once the Forward Phase is complete, the *Unwinding Phase* begins. This is the co
 In Python, that would look something like this:
 
 <div class="al-marimo-inline" markdown="1">
+
 ```python
 def kthFibonacci_Recursion(n):
     
-    # base case
+    # basis and termination criteria
     if n <= 1:
         return n
       
-    # sum of the two preceding 
-    # Fibonacci numbers
+    # sum of the two preceding Fibonacci numbers: F(n) = F(n-1) + F(n-2)
     return kthFibonacci_Recursion(n - 1) + kthFibonacci_Recursion(n - 2)
 
 print(kthFibonacci_Recursion(5))
-```
-
-```python
-import marimo as mo
-
-slider = mo.ui.slider(1, 20, value=5, label="n")
-slider
-```
-
-```python
-mo.md(f"The first {slider.value} squares: {[i**2 for i in range(1, slider.value + 1)]}")
 ```
 
 </div>
