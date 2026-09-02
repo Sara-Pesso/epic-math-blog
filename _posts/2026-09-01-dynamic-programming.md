@@ -85,4 +85,6 @@ print(kthFibonacci_Recursion(5))
 
 ## Memoization (Top-Down)
 
+You can probably already see some redundancies in calculations looking at the $F(5)$ tree calculations. When we use recursions, we are calculating $F(3)$ twice, and every time we calculate $F(3)$, we calculate $F(2)$ once and $F(1)$ twice, and so on and so forth. 
+
 ## Tabulation (Bottom-Up)
