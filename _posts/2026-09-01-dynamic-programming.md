@@ -109,7 +109,7 @@ In Python,
 <div class="al-marimo-inline" markdown="1">
 
 ```python
-from math import *
+from math import nan
 
 def kthFibonacciNumber_Memoization(k):
     dp = [nan] * (k + 1)
@@ -135,9 +135,18 @@ print(kthFibonacciNumber_Memoization(7))
 
 </div>
 
-So, the basic trade off here is a little more storage complexity is required in order to save the results of each subproblem, but in return we save on time complexity. For long recursive problems, say calculating $F(1,000,000)$, this is an important trade off to make as it will drastically decrease the time your algorithm needs to run. 
+So, the basic idea here isr we save on time complexity. For long recursive problems, say calculating $F(1,000,000)$, this is an important trade off to make as it will drastically decrease the time your algorithm needs to run. 
 
-In terms of Big-O notation, 
+In terms of Big-O notation, we have reduced the time complexity from $O(2^n)$ (calling our function $2^n$ times), to only $O(n)$. This is because instead of repeatedly calculating the same subproblem over and over, we only need to calculate each subproblem once-- the rest of the time is a quick call to the DP table-- and there are only $n$ subproblems that need to be solved.
 
+Of course, unlike pure recursion that doesn't store the results of any subproblem, it seems natural that memoization will require higher space complexity. But, this isn't actually the case. The **cache size** (the size of the DP table) is only $n$. Also, the resultant callstack is only (at most) $n$ calls deep. Therefore, 
+
+$$O(n) + O(n) = O(n)$$
+
+In actuality, even though it may seem like we are using more storage, this isn't really the case. Yet another reason dynamic programming is preferred to pure recursion.
 
 ## Tabulation (Bottom-Up)
+
+The final dynamic programming method we will discuss in here, **tabulation**, works very similarly to memoization. The main difference is, tabulation is *Bottom-Up*, rather than memoization which is top-down. 
+
+All this means 
