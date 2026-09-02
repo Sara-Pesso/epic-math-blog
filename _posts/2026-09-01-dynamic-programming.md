@@ -79,6 +79,21 @@ def kthFibonacci_Recursion(n):
 print(kthFibonacci_Recursion(5))
 ```
 
+<div class="al-marimo-inline" markdown="1">
+
+```python
+import marimo as mo
+
+slider = mo.ui.slider(1, 20, value=5, label="n")
+slider
+```
+
+```python
+mo.md(f"The first {slider.value} squares: {[i**2 for i in range(1, slider.value + 1)]}")
+```
+
+</div>
+
 ## Memoization (Top-Down)
 
 ## Tabulation (Bottom-Up)
