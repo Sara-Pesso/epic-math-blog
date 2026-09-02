@@ -53,7 +53,7 @@ We can divide the cases this way, because $\forall i > 1$, $F(i)$ is a repeated 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/dp-blog/fib-recursion-tree.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/dp-blog/fib-recursion-tree.png" class="img-fluid w-50 rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
