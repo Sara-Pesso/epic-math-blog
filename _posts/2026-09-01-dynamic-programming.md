@@ -65,6 +65,8 @@ We can see here how every branch of the tree eventually gets down to the $F(0)$ 
 Once the Forward Phase is complete, the *Unwinding Phase* begins. This is the computer "coming back up" the callstack,and solving all the functions it's created (in the case of the Fibonacci sequence, basically this would look like a summation of a bunch of 1s, depending on the $n^{th}$ Fibonacci number we are calculating). The program then terminates, returning the $n^{th}$ Fibonacci number as the user defined. 
 
 In Python, that would look something like this:
+
+<div class="al-marimo-inline" markdown="1">
 ```python
 def kthFibonacci_Recursion(n):
     
@@ -78,8 +80,6 @@ def kthFibonacci_Recursion(n):
 
 print(kthFibonacci_Recursion(5))
 ```
-
-<div class="al-marimo-inline" markdown="1">
 
 ```python
 import marimo as mo
