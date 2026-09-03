@@ -275,6 +275,6 @@ For example, if we were to use such a method when trying to solve TSP, if we did
 
 There is another really important way we can improve the time and space complexity of our dynamic programming algorithms: The Bitmask. Bitmasks are essentially using the binary representation of natural numbers to represent various subproblem states. This primarily improves space complexity, but will also help with speed. And it's crucial if we want efficient algorithms that also give us the route our salesman need to take! For a crash course on Bitmasks, see the next blog post in this series [here](https://sara-pesso.github.io/epic-math-blog/blog/2026/bitmasks/). 
 
-Hopefully this crash course on dynamic programming was pretty easy to understand and digest, because we are only going to build from here! Please see my [GitHub Repo]() for the code used in this post!
+Hopefully this crash course on dynamic programming was pretty easy to understand and digest, because we are only going to build from here! Please see my [GitHub Repo](https://github.com/Sara-Pesso/dynamic-programming/tree/main/fibonacci) for the code used in this post!
 
 - Sara 9/1/2026
