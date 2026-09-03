@@ -98,7 +98,7 @@ What if we were able to save the results of these subproblems, instead of recalc
 Doing this from the top-down--  that is, in Fibonacci terms, starting with $F(n)$ and working down the tree to $F(1)$-- and caches the results of each subproblem in a table to be pulled from later if the subproblem is revisited in a recursive algorithm (like Fibonacci numbers), is called **memoization**. Frequently such a table is referred to as a *memoization table* or *DP (dynamic programming) table*. Looking at the pseudocode for this, we'd have something like
 
 1. Initialize the DP table (an empty $1xn$ vector). Where, $n$ is Fibonacci index of interest and NaN is a value that indicates the table hasn't yet been filled for a specific index:
-$$dp = [\bm{NaN}]^{1 x n}$$
+$$dp = [NaN]^{1 x n}$$
 2. Create the basis and termination criteria. This is the same as in the recursive approach: if we recurse to $n \leq 1$, begin working back up the callstack. 
 3. Check the DP table for the result of the subproblem
     - if the subproblem has been solved before and we have the result (i.e.,$dp(i) \not = NaN$), return that value.
@@ -149,4 +149,39 @@ In actuality, even though it may seem like we are using more storage, this isn't
 
 The final dynamic programming method we will discuss in here, **tabulation**, works very similarly to memoization. The main difference is, tabulation is *Bottom-Up*, rather than memoization which is top-down. 
 
-All this means 
+All this means is that instead of starting with our desired $F(n)$ and working down to the basis, $F(1)$, we instead start at the basis and calculate all the intermediate subproblems up to $F(n)$. That is to say, it is completely iterative. 
+
+This actually probably the
+
+The steps are similar to memoization:
+
+1. Initialize the DP table (an empty $1xn$ vector). Where, $n$ is Fibonacci index of interest and NaN is a value that indicates the table hasn't yet been filled for a specific index:
+$$dp = [NaN]^{1 x n}$$
+
+2. Iterate through cases $i = 2$ to $i=n$, calculating each subproblem and filling in the DP table.
+
+As a Python function, this looks like
+
+<div class="al-marimo-inline" markdown="1">
+
+```python
+from math import nan
+
+def kthFibonacciNumber_Tabulation(k):
+    # Initialize the Fibonacci Numbers: [0,1]
+    if k <= 1:
+        return k
+
+    dp = [nan] * (k + 1)
+    dp[0], dp[1] = 0, 1
+
+    # Solve up to k
+    for i in range(2, k + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+
+    return dp[k]
+```
+
+</div>
+
+## Time Optimized Tabulation for the Fibonacci Sequence
