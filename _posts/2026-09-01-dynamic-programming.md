@@ -184,4 +184,93 @@ def kthFibonacciNumber_Tabulation(k):
 
 </div>
 
-## Time Optimized Tabulation for the Fibonacci Sequence
+This particular implementation of tabulation for the Fibonacci sequence actually has the same time complexity and the same space complexity as memoization. Because each Fibonacci number is only calculated once and then the result is stored in the DP table, the time complexity remains as $O(n)$. The same is true of the space complexity, which remains as $O(n)$ as each number is catalogued in the DP table.
+
+There is more than one way to skin a cat: we can implement tabulation slightly differently to improve the time complexity of the Fibonacci sequence. 
+
+## Space Optimized Tabulation for the Fibonacci Sequence
+
+Again, we can make a trade off. Recall,
+
+$$F(n) = F(n-1) + F(n-2)$$
+
+If we only care about finding $F(n)$ and we don't care about the results of all the subproblems, then we can simply "throw away" all the subproblems results, $F(i)$, $\forall i <  n-2$. In other words, we need only keep $F(i-1)$ and $F(i-2)$ at each iterative step, rewriting the same bit of memory each time. This way, we only ever have two of the Fibonacci numbers stored. 
+
+In this case, the time complexity remains $O(n)$, since we are still calculating each Fibonacci number once, but the space complexity is reduced to $O(1)$, since we are only keeping track of two Fibonacci numbers at a time. 
+
+That implementation is very similar:
+1. Initialize the array $[F(i-2), F(i-1)] = [F(0), F(1)] = [0,1]$
+2. For each $0 < i <n$:
+    - Calculated $F(i) = F(i-1) + F(i-2)$
+    - Update the array, where $F(i-1)$ becomes $F(i-2)$, and $F(i)$ becomes $F(i-1)$ before looping to the next $i^{th}$ Fibonacci number.
+
+And as some executable Python, it looks like this:
+
+<div class="al-marimo-inline" markdown="1">
+
+```python
+def kthFibTabulation_OptimizedSpace(k):
+    if k <= 1: 
+        return k
+
+    # Store only the current Fibonacci number, instead of all k Fibonacci numbers
+    current_fib = 0 
+
+    # Initialize the first two Fibonacci numbers: [0,1]
+    previous_fibs = [0,1]
+
+    for _ in range(2, k + 1):
+        current_fib = previous_fibs[0] + previous_fibs[1]
+
+        #Update!
+        previous_fibs = [previous_fibs[1], current_fib]
+
+    return current_fib
+```
+</div>
+
+## Quick Time Comparison of the Dynamic Programming Methods!
+
+This is a simple way to test and compare the speed of your algorithms in Python. The timeit library will run your algorithm $x$ times (in this case, 100,000 times) for whatever $F(k)$ we want. Choosing a larger $k$, like 100, is a good test because it becomes very computationally dense, as we can see if we think back to how large just the $F(5)$ tree was earlier. The timeit package then spits out how long (seconds) the all $x$ runs took, so if we divide by $x$ we get the average run time for each program.
+
+In fact, recursion was so slow, it was omitted from this test. Feel free to un-comment it and see for yourself!
+
+<div class="al-marimo-inline" markdown="1">
+
+```python
+import timeit
+from memoization import total_time_memoization
+from tabulation import kthFibonacciNumber_Tabulation, kthFibTabulation_OptimizedSpace
+from recursion import kthFibonacci_Recursion
+
+# Testing the time complexity
+k = 100
+runs = 100000
+
+# total_time_recursion = timeit.timeit('kthFibonacci_Recursion(k)', globals=globals(), number=runs)
+# print(f"Average Recursion Time: {total_time_recursion/runs:.7f} seconds")
+
+total_time_memoization = timeit.timeit('kthFibonacciNumber_Memoization(k)', globals=globals(), number=runs)
+print(f"Average Memoization (Top-Down) Time: {total_time_memoization/runs:.7f} seconds")
+
+total_time_tabulation = timeit.timeit('kthFibonacciNumber_Tabulation(k)', globals=globals(), number=runs)
+print(f"Average Tabulation (Bottom-Up) Time: {total_time_tabulation/runs:.7f} seconds")
+
+total_time_tabulation_opt = timeit.timeit('kthFibTabulation_OptimizedSpace(k)', globals=globals(), number=runs)
+print(f"Average Tabulation Optimized (Bottom-Up) Time: {total_time_tabulation_opt/runs:.7f} seconds")
+```
+</div>
+
+This test script's results vary slightly between runs, but in general you will see that memoization is clearly the slower method, with the two implementations of tabulation significantly faster, but neck and neck with each other. This makes sense given our discussions about the time complexity of these methods, with respect to the Fibonacci sequence. 
+
+## Conclusion
+
+As aforementioned in our discussion about recursion, having our tabulation algorithm space optimized isn't always going to be a positive. In the case of the Fibonacci sequence, it probably doesn't really matter what any of the answers to the subproblems were, so it's fine if we simply delete them. But, some of the other famous problems we talked about earlier would not fair as well when we sacrifice space complexity. 
+
+For example, if we were to use such a method when trying to solve TSP, if we didn't keep track of *all* the cities and the order we visited them in, we might be able to spit out the minimum distance our salesman can possibly travel, but we would not have saved the route he needs to take. Same goes for the SSQ or LeetCode 1434-- maybe we could quickly determine that there does in fact exist some solution, but we won't be able to show it at the end of the algorithm. We will be exploring all of these in subsequent blog posts, but just something to chew on for now.
+
+There is another really important way we can improve the time and space complexity of our dynamic programming algorithms: The Bitmask. Bitmasks are essentially using the binary representation of natural numbers to represent various subproblem states. This primarily improves space complexity, but will also help with speed. And it's crucial if we want efficient algorithms that also give us the route our salesman need to take! For a crash course on Bitmasks, see the next blog post in this series [here](https://sara-pesso.github.io/epic-math-blog/blog/2026/bitmasks/). 
+
+Hopefully this crash course on dynamic programming was pretty easy to understand and digest, because we are only going to build from here! Please see my [GitHub Repo]() for the code used in this post!
+
+- Sara 9/1/2026
