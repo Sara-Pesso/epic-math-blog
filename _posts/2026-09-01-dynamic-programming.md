@@ -180,6 +180,8 @@ def kthFibonacciNumber_Tabulation(k):
         dp[i] = dp[i-1] + dp[i-2]
 
     return dp[k]
+
+print(kthFibonacciNumber_Tabulation(7))
 ```
 
 </div>
@@ -226,6 +228,8 @@ def kthFibTabulation_OptimizedSpace(k):
         previous_fibs = [previous_fibs[1], current_fib]
 
     return current_fib
+
+print(kthFibTabulation_OptimizedSpace(7))
 ```
 </div>
 
