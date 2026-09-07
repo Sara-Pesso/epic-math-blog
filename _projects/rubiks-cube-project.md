@@ -1231,6 +1231,6 @@ solvable! Conversely, we can easily make our own trick Illegal Rubik’s
 Cubes using the same group theory!</p>
 <h1 id="bibliography.">Bibliography.</h1>
 <div class="appendices">
-<p>All code is available here: <a
-href="https://github.com/Sara-Pesso/rubiks-cube-group-theory"
-class="uri">https://github.com/Sara-Pesso/rubiks-cube-group-theory</a>.</p>
+<p>All code is available <a
+href="https://github.com/Sara-Pesso/rubiks-cube-group-theory">
+here</a>, on my GitHub!</p>
