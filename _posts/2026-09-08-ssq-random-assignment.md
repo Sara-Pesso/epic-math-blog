@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'Dynamic Programming For Dummies - Pt. 3: SSQ with Memoization'
+title: 'Dynamic Programming For Dummies - Pt. 3: SSQ as an Assignment Problem'
 date: 2026-09-08
-description: How to solve SSQ like a Random Assignment problem using DP, memoization, and bitmasking. 
+description: How to solve SSQ like a Random Assignment problem using DP and bitmasking. 
 tags: [dp-for-dummies, algorithms, comp-sci, random-assignment, SSQ]
 categories: [blog]
 featured: true
