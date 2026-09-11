@@ -17,7 +17,7 @@ So, if you'll recall from the [first blog post](https://sara-pesso.github.io/epi
 - Traveling Salesman
 - Randomly assigning preferred objects (once we talk about this, you'll be able to complete [LeetCode 1434. Number of Ways to Wear Different Hats to Each Other](https://leetcode.com/problems/number-of-ways-to-wear-different-hats-to-each-other/description/).)
 
-We're going to start with treating the SSQ as a Random Assignment Problem. In the original [SSQ blog post]() I talked about how randomly assigning Secret Santa participants to each other and then checking whether those pairings were allowed based on the user inputted exclusions was my first attempt at tackling this problem on behalf of my MIL. Because of that, I think updating the original revision made in that post (i.e., implementing Depth-First Search (DFS) in order to find a Hamiltonian Cycle) with memoization would be an appropriate way to begin.
+We're going to start with treating the SSQ as a Random Assignment Problem. In the original [SSQ blog post](https://sara-pesso.github.io/epic-math-blog/blog/2026/SecretSanta/) I talked about how randomly assigning Secret Santa participants to each other and then checking whether those pairings were allowed based on the user inputted exclusions was my first attempt at tackling this problem on behalf of my MIL. Because of that, I think updating the original revision made in that post (i.e., implementing Depth-First Search (DFS) in order to find a Hamiltonian Cycle) with memoization would be an appropriate way to begin.
 
 To be clear, while we are once again implementing DFS we are not necessarily interested in finding a *Hamiltonian Cycle*. All we want is *any* valid assignment of gift-givers and gift-receivers. I think leaving out the Hamiltonian Cycle aspect of the SSQ for our first foray into solving it using DP will make the explanations more simple and therefore digestible. 
 
@@ -39,7 +39,7 @@ objs = [[0, 1, 2],
 In this example, node (gift-giver) 2 can only be assigned object (gift-getter) 0 or 1. (Note: Recall that Python iterates from 0! This means the maximum object index is 1 less than $n$, the total number of objects). 
 
 ### Tabulation
-OK!-- it's now time for the big reveal: how we can use the tabulation and bitmask example from the [previous post]() in this series to solve the SSQ!
+OK!-- it's now time for the big reveal: how we can use the tabulation and bitmask example from the [previous post](https://sara-pesso.github.io/epic-math-blog/blog/2026/bitmasks/) in this series to solve the SSQ!
 
 Recall that in that example we used DP in tabulation to minimize the *cost* of assigning each object to a person-- giving us a very specific assignment arrangement. The easiest way to use this to solve the SSQ: simple edit the cost matrix to (negative) binary!
 
@@ -73,10 +73,10 @@ Min. Cost: -3
 ```
 As you can see, each person ("node") is assigned to another Secret Santa participant ("object") to purchase a Christmas gift for whose cost is set to -1-- and the resultant minimum cost will always be $-n$ using this heuristic. 
 
-This full script can be found on [my GitHub, here]().
+This full script can be found on [my GitHub, here](https://github.com/Sara-Pesso/dynamic-programming/blob/main/unique_assignment/tabulation-bitmask.py).
 
 ### Memoization
-In the LeetCode version of this problem, they just want to know how many **unique ways** there are to assign people 40 hats (40 being the max, because bitmasking is not appropriate for large $n$, see the [previous blog post on bitmasking]()). We will need to take this one step further: we need actually want to *display* one of those unique assignments. So, bearing this in mind we will write a counter function to solve this for LeetCode, then return the DP table, and finally write another function to extract any unique assignment from the DP table.
+In the LeetCode version of this problem, they just want to know how many **unique ways** there are to assign people 40 hats (40 being the max, because bitmasking is not appropriate for large $n$, see the [previous blog post on bitmasking](https://sara-pesso.github.io/epic-math-blog/blog/2026/bitmasks/)). We will need to take this one step further: we need actually want to *display* one of those unique assignments. So, bearing this in mind we will write a counter function to solve this for LeetCode, then return the DP table, and finally write another function to extract any unique assignment from the DP table.
 
 As aforementioned, in the LeetCode hat-assignment version of this problem, there can be more hats than people to assign them to-- but of course, for answering the SSQ, there are the same number of gift-givers as receivers. We will accommodate both of these possibilities. Again, we will use the terminology of assigning *objects* (rather than "hats" or "gift-receivers") to *nodes* (rather than "people" or "gift givers"). Our function will take an a Python list of lists (LOLs) as user-defined input:
 ```python
@@ -241,7 +241,7 @@ if assigned_obj and current_mask == full_mask:
 ```
 
 ### Conclusion
-Then, we can print out the results! Now, you can apply this to both LeetCode 1434 and the SSQ. We simply need to make an input matrix that appropriately describes allowed pairings between the participants. In my [current GUI](), it in takes a CSV file-- that the user can select-- which describes the *exclusions* between the participants. So, we'd need to add a preprocessing function to our code base that transforms that exclusion table into a matrix of the correct form. 
+Then, we can print out the results! Now, you can apply this to both LeetCode 1434 and the SSQ. We simply need to make an input matrix that appropriately describes allowed pairings between the participants. In my [current GUI](https://github.com/Sara-Pesso/secret-santa-app), it in takes a CSV file-- that the user can select-- which describes the *exclusions* between the participants. So, we'd need to add a preprocessing function to our code base that transforms that exclusion table into a matrix of the correct form. 
 
 I find it a really fun exercise to approach the same problem from multiple angles, like I'm doing with this dynamic programming series. I, personally, could think of three different DP heuristics which could solve the Secret Santa Question my MIL asked me about-- and there's plenty of other ways to solve this (some of which are even better, then anything I could come up with!) that people way smarter than me could come up with. 
 
@@ -250,7 +250,7 @@ Happy programming!
 - Sara 9/10/2026
 
 ## Python Code
-This script can be found on [my Github!]()
+This script can be found on [my Github!](https://github.com/Sara-Pesso/dynamic-programming/blob/main/unique_assignment/memoization.py)
 Here is a working version of algorithm we walked through above.
 
 <div class="al-marimo-inline" markdown="1">
