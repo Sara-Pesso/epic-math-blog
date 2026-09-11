@@ -2,8 +2,8 @@
 layout: post
 title: 'Dynamic Programming For Dummies - Pt. 3: SSQ as an Assignment Problem'
 date: 2026-09-10
-description: How to solve SSQ like a Random Assignment problem using DP and bitmasking. 
-tags: [dp-for-dummies, algorithms, comp-sci, random-assignment, SSQ]
+description: How to solve SSQ like a Random Assignment problem using DP and bitmasks. 
+tags: [dp-for-dummies, algorithms, comp-sci, random-assignment, SSQ, dynamic-programming,]
 categories: [blog]
 featured: true
 marimo: true
