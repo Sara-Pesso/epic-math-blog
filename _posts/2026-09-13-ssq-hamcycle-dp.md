@@ -1,0 +1,138 @@
+---
+layout: post
+title: 'Dynamic Programming For Dummies - Pt. 4: Using Dynamic Programming to Find Hamiltonian Cycles in Graphs'
+date: 2026-09-12
+description: How to solve SSQ by finding any ol' Hamiltonian Cycle in a user's graph.
+tags: [dp-for-dummies, algorithms, comp-sci, hamiltonian-cycles, dynamic-programming, SSQ]
+categories: [blog]
+featured: true
+marimo: true
+---
+# Introduction
+
+# Tabulation
+0. Like we discussed previously in the original [SSQ blog post](), our function will in take a an **adjacency matrix** to describe valid connections between nodes, let's call this matrix $C$. Then, a element $C_{i,j}$ represents whether there is a valid path from node $i$ to node $j$-- 1 means there is a connection, 0 means there is not. As an example:
+```python
+adj = [
+    [0, 1, 0, 1, 1],
+    [1, 0, 1, 1, 0],
+    [0, 1, 0, 1, 1],
+    [1, 1, 1, 0, 1],
+    [1, 0, 1, 1, 0]
+]
+```
+We will have our function return the DP table and a boolean variable indicating whether our graph contains a Hamiltonian Cycle. So, we know our outputs will look like this:
+```python
+ham_check, dp = find_hamiltonian_cycle(adj)
+```
+
+OK-- now let's do a deep dive into the weeds of how this algorithm works!
+
+1. Initialize variables needed for DP algorithm: find $n$ the (number of nodes), calculate the total number of states ($2^n$, represented by a $n$-bit bitmask). 
+```python
+# Number of nodes
+n = len(adj_matrix)
+# Total combinations of nodes is 2^n
+num_states = 1 << n
+```
+
+2. Also, initialize the DP table: $-1$, ```NaN```, or other values that do not appear as node indices are appropriate. This DP table will map the tuple containing the resultant bitmask from traveling to node $j$ to the node one step previous, node $i$. Also, we can (arbitrarily) start at node $0$, so ```dp[0][0] = 0```, and we can initialize ```dp[1][0] = 0```. This is equivalent to realizing that at bitmask $1$, we had to have come from node $0$. 
+```python
+dp = [[-1] * n for _ in range(num_states)]
+dp[1][0] = 0
+```
+
+3. Iterate through all the bitmasks and in a nested loop, iterate through each node. Recall that the bitmask simply represents the nodes that have already been visited on our path. 
+```python
+for mask in range(num_states):
+        for i in range(n):
+```
+
+4. Check the DP table for the current bitmask and node $i$ combination. If the value currently stored in the DP table is $-1$ (or whatever empty value you have chosen) we need to skip, as the bitmask is unattainable. This may be slightly confusing to think about at first, but because we are excluding edges from our graph (i.e., connections between nodes), there are going to be certain bitmask-object combinations that lead to invalid results. So, skip to the next bitmask and repeat.
+```python
+if dp[mask][i] == -1:
+    continue
+```
+
+5. Since we are first iterating through the *bitmasks*, as we iterate through the nested loop of nodes we need to verify that node $i$ is actually passed through in the current bitmask. We can do this by checking that the $i^{th}$ bit is set in the current bitmask using the bitwise operators we discussed previously. 
+```python
+if mask & (1 << i):
+```
+
+6. Begin looping through the *next* nodes-- another nested loop iterating through the nodes. Now, we will have node $i$ (the node we are currently stationed at) and node $j$ (a possible next node to move to).
+```python
+    for j in range(n):
+```
+
+7. So now we can check if we can see if moving from node $i$ to node $j$ is a valid move:
+    - We've previously verified that node $i$ appears in the current bit mask.
+    - Next, we'll need to check that $i \not = j$ (obviously we can't move from a node to itself)
+    - Check that node $j$ is not already in the bitmask using the bitwise operators (if the $j^{th}$ bit is already set, it means we've already passed through node $j$ in this bitmask)
+    - And finally, verify that node $i$ is allowed to connect to node $j$, using the adjacency matrix
+```python
+    if j != i and not (mask & (1 << j)) and adj_matrix[i][j]:
+```
+
+8. If all these checks are passed, then the connection is valid. Add it to the bitmask and the DP table. Simply, the next bitmask will have the $j^{th}$ bit set, and the DP table will map this new mask and node $j$, back to the previous node $i$. Recording it like this will make it easier to decode the DP table later on an report the Hamiltonian Path we are currently working to find. 
+```python
+    next_mask = mask | (1 << j)
+    dp[next_mask][j] = i
+```
+
+9. Finally, once the nested loops are completed all we need to do is finish the loop by verifying that the last node $i \not = 0$ can in fact connect back to node $0$ (the starting point) at the "full" bitmask-- that is, the bitmask of all ones. If this is the case, terminate the function by returning ```True``` (is in a Hamiltonian Cycle through the graph exists) and the DP table. Otherwise, return ```False``` and the DP table. 
+```python
+full_mask = num_states - 1
+for i in range(n):
+    if dp[full_mask][i] and adj_matrix[i][0]:
+        return True, dp
+        
+return False, dp
+```
+## Reconstructing the Hamiltonian Cycle from the DP Table
+
+The last thing we need to do is use the resultant DP table to decode a valid Hamiltonian Cycle through our graph (adjacency matrix-- same thing!). 
+
+1. Our function outputs a boolean variable indicating whether there is a valid Hamiltonian Cycle somewhere in the graph. So, first we will check that it's been set to ```True``` in our algorithm. Otherwise, there's no Hamiltonian Cycle and we'll output that as the result. 
+```python
+if ham_check: 
+```
+
+2. Set some variables with values we will need:
+    - $n$ = the number of nodes in the graph
+    - The full mask; the bitmask of all 1s that will indicate we have traveled through all the nodes
+    - A flag indicating whether the final was able to loop back to node $0$
+```python
+n = len(adj)
+final_mask = (1 << n) - 1
+end_node = -1
+```
+
+3. Loop through all the nodes: before we start working backwards through the DP table to decode the Hamiltonian Cycle it hold, we need to find the final node that the Hamiltonian Cycle passes through before heading back to node $0$. If the DP table of the full mask (bitmask of all ones indicating we've passed through all the nodes) and the node $i$ is not $-1$ (i.e., we visit all nodes) and node $i$ can connect to node $0$, we'll overwrite the ```end_node``` flag with index $i$. This will tell us the final node $i \not = 0$ in the Hamiltonian Cycle.
+```python
+for i in range(n):
+    if dp[final_mask][i] != -1 and adj[i][0] == 1:
+        end_node = i
+        break
+```
+4. If we make it through this process and the ```end_node``` flag is never overwritten with the index of a valid end node, there is no Hamiltonian Cycle and we report as such.
+```python
+if end_node == -1: 
+    print("No Hamiltonian Cycle")
+```
+
+5. If there is a valid ```end_node``` set in our flag, we will proceed decoding the DP table! First, we'll set some more variables we will need to complete this task:
+    - Initialize an empty list that we will fill in with the node order as we go (we are going from the final node backwards, so eventually we will reverse the order of this list)
+    - Set the current node to ```end_node```-- this is where we will start (at the end!)
+    - And since we are starting at the end, we will start at the "full" mask (again, the bitmask of all ones indicating we've passed through all the nodes). 
+```python
+else:
+    ham_cycle = []
+    current_node = end_node
+    current_mask = final_mask
+```
+
+6. To actually work our way through the DP table to decode the Hamiltonian we found is fairly straight forward. 
+
+# Applied to the SSQ
+
+# Conclusion
