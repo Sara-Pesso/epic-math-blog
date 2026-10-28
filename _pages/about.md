@@ -25,4 +25,7 @@ latest_posts:
   limit:  # leave blank to include all the blog posts
 ---
 
-Let's start editing this page...
+Hi! Welcome to my Epic Math Blog!
+My name is Sara, and I am currently studying for my M.S. in Computational Mathematics & Data Applications at the University of Southern Mississippi. I have BS in Applied Mathematics from the Virginia Military Institute and a Graduate Certificate in Applied & Computational Mathematics from Johns Hopkins University. 
+
+This 
