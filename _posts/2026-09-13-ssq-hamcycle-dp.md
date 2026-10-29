@@ -319,7 +319,7 @@ if ham_check:
 </div>
 
 # Applied to the SSQ
-We've already discussed in detail the utility of using Hamiltonian Cycles to the Secret Santa Questions in the [original SSQ post](), so we'll rehash it briefly here. If you want a deep-dive into Hamiltonian Cycles and how they and Depth-First Search can be used to solve the SSQ, definitely read that post! It has more information on the subject than anyone could ever need. 
+We've already discussed in detail the utility of using Hamiltonian Cycles to the Secret Santa Questions in the [original SSQ post](https://sara-pesso.github.io/epic-math-blog/blog/2026/SecretSanta/), so we'll rehash it briefly here. If you want a deep-dive into Hamiltonian Cycles and how they and Depth-First Search can be used to solve the SSQ, definitely read that post! It has more information on the subject than anyone could ever need. 
 
 In our SSQ, we are asked to make exclusions between gift-givers and gift receivers; some participants are not allowed to be the Secret Santa for certain other participants. A husband should always get a Christmas gift for his wife, regardless of who he pulls for Secret Santa (and vice versa, ladies!) and we don't want one gift-giver getting the same person several years in a row. Really, the reasons don't matter, we can visualize the web of allowed connections as a **directional graph** or simply a **digraph**, where the *edges* (connections between nodes) are only valid in one direction. 
 
