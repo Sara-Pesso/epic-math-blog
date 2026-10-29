@@ -10,12 +10,12 @@ marimo: true
 ---
 # Introduction
 
-As alluded to in the [first blog post of this series](), we are now on to the second dynamic programming heuristic of interest when it comes to solving the [Secret Santa Question (SSQ)](): using dynamic programming to find a unique Hamiltonian Cycle through a graph.  
+As alluded to in the [first blog post of this series](https://sara-pesso.github.io/epic-math-blog/blog/2026/dynamic-programming/), we are now on to the second dynamic programming heuristic of interest when it comes to solving the [Secret Santa Question (SSQ)](https://sara-pesso.github.io/epic-math-blog/blog/2026/SecretSanta/): using dynamic programming to find a unique Hamiltonian Cycle through a graph.  
 
 If you haven't read the posts in this series up to this point, I recommend going back to check them out! I am going to be referencing ideas discussed in those posts without rehashing them in depth in this post. Without further ado, let's jump into how to find a Hamiltonian Cycle with dynamic programming and how is fits into the Secret Santa problem!  
 
 # Tabulation
-0. Like we discussed previously in the original [SSQ blog post](), our function will in take an **adjacency matrix** to describe valid connections between nodes, let's call this matrix $C$. Then, an element $C_{i,j}$ represents whether there is a valid path from node $i$ to node $j$-- 1 means there is a connection, 0 means there is not. As an example:
+0. Like we discussed previously in the original [SSQ blog post](https://sara-pesso.github.io/epic-math-blog/blog/2026/SecretSanta/), our function will in take an **adjacency matrix** to describe valid connections between nodes, let's call this matrix $C$. Then, an element $C_{i,j}$ represents whether there is a valid path from node $i$ to node $j$-- 1 means there is a connection, 0 means there is not. As an example:
 ```python
 adj = [
     [0, 1, 0, 1, 1],
