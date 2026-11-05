@@ -10,7 +10,10 @@ marimo: true
 ---
 
 # Fun with Prime Numbers!
+Some prereqs...
 - prime factorization
+- modular arithmetic/ congruence
+
 ## Are there infinite prime numbers?
 **Short answer:** YES!!
 
@@ -61,6 +64,7 @@ We can actually use Euclid's proof of infinite primes to make an algorithm to ge
 - $m$ is a new prime itself
 - or $m$ has a new prime factor
 This sequence is known as the Euclid-Mullin sequence. 
+
 ### Euclid's Prime Algorithm (Euclid-Mullin Sequence)
 1. Start with the smallest prime: $P = \{2\}$
 2. $m = 2 +1 = 3$, 3 is prime $\implies P=\{2,3\}$
@@ -77,17 +81,41 @@ Therefore, we will **always** have a new prime to append to $P$.
 
 For example, we know that that in iteration (5), our new prime factor $p_5 =13$ will not repeat because since $p|(2)(3)(7)(43)$ for $p\in\{2,3,7,43\}$, *none* of $\{2,3,7,43\}$ will divide $(2)(3)(7)(43) + 1$ (by Euclid's Proof of Infinite Primes). 
 
+### Dirichlet's Theorem
+A couple millennia after Euclid, in 1837 Peter Dirichlet proved a theorem that came to be known as Dirichlet's Theorem on Arithmetic Progressions, which states
+
+> Let $a, \in \mathbb{Z}$ such that $gcd(a,m) = 1$. Then, $\exists$ infinitely many primes that are congruent to $a$ modulo $m$. That is, $\exists$ infinitely many primes $p\in\mathbb{N}$ such that
+
+$$p \equiv a (\text{mod m})$$
+
+The proof of this is very involved and is a lot more than we will get into here, but it is simple to see that is $gcd(a,m) > 1$ this theorem no longer holds. Let's choose $a = 35$ and $m = 77$. Clearly, $gcd(35, 77) = 7$. If there were infinitely primes $p\in\mathbb{N}$ such that $p \equiv 35 (\text{mod } 77)$, this implies that by the definition of congruence we should be able to generate those $p$ using the expression
+$$ p = 77x + 35 = 7(11x +5)$$
+where $x \in\mathbb{N}$. But, clearly the only prime this could possibly generate is $p=7(1)$, otherwise $7|p \implies$ p is composite, *not* prime. Moreover, $\not\exists x\in\mathbb{N}$ such that $11x + 5 = 1$ is true. So, we have found a  counterexample where this theorem fails if $gcd(a,m) \not= 1$. 
+
+Also, though very involved to prove Dirichlet's Theorem generally, we can prove it works pretty easily for specific chosen values of $a$ and $m$. For example, let $a = 3$ and $m = 4$. Clearly, $gcd(3,4) = 1$, so Dirichlet's Theorem applies. We can also prove that there exists infinitely many $p\in\mathbb{N}$ such that
+$$p\equiv 3 (\text{mod }4)$$
+**without Dirichlet's Theorem!**
+
+We will show Dirichlet's holds in this case using contradiction. Assume $\exists$ a *finite* amount of primes $p\in\mathbb{N}$ such that $p\equiv 3 (\text{mod }4)$ denoted
+$$P = \{p_0 = 3, p_1 = 7, \cdots, p_n\}$$
+Now, we can define
+
+
 ## Does the Euclid-Mullin Sequence contain all the primes?
 **Short answer:** No!
 
 **Long answer:** But there are variations that can!
 
+#TODO: talk about the numbers skipped, etc. 
+
 [A VARIANT OF THE EUCLID–MULLIN SEQUENCE CONTAINING
 EVERY PRIME](https://arxiv.org/pdf/1605.08929)
 
-
+## Some known functions that generate all the primes
+[Formula for primes](https://en.wikipedia.org/wiki/Formula_for_primes)
 
 # Is Number Theory Useful?
-Short answer: Some of it!
-Long answer: Does it need to be?
+**Short answer:** Some of it!
+
+**Long answer:** Yes! Cryptography is field in which it is pretty useful. But, does number theory need to be useful to make it worth studying?
 
