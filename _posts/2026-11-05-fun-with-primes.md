@@ -78,9 +78,9 @@ We can be sure the new primes and prime factors we find each iteration will not 
 $$p_i\Biggl|\prod_{i=1}^{n-1}p_i, \text{ }\forall i \in[1,n-1]$$
 we can be sure each $p_i$, $\forall i \in[1, n-1]$
 $$p_i \not \Biggl| \Biggl[\prod_{i=1}^{n-1}p_i\Biggr] +1$$
-Therefore, we will **always** have a new prime to append to $P$. 
+Therefore, we will **always** have a new prime to append to P. 
 
-For example, we know that that in iteration (5), our new prime factor $p_5 =13$ will not repeat because since $p|(2)(3)(7)(43)$ for $p\in\{2,3,7,43\}$, *none* of $\{2,3,7,43\}$ will divide $(2)(3)(7)(43) + 1$ (by Euclid's Proof of Infinite Primes). 
+For example, we know that in iteration (5), our new prime factor $p_5 =13$ will not repeat because since $p|(2)(3)(7)(43)$ for $p\in\{2,3,7,43\}$, *none* of $\{2,3,7,43\}$ will divide $(2)(3)(7)(43) + 1$ (by Euclid's Proof of Infinite Primes). 
 
 ### Dirichlet's Theorem
 A couple millennia after Euclid, in 1837 Peter Dirichlet proved a theorem that came to be known as Dirichlet's Theorem on Arithmetic Progressions, which states
@@ -91,7 +91,7 @@ $$p \equiv a (\text{mod m})$$
 
 The proof of this is very involved and is a lot more than we will get into here, but it is simple to see that is $gcd(a,m) > 1$ this theorem no longer holds. Let's choose $a = 35$ and $m = 77$. Clearly, $gcd(35, 77) = 7$. If there were infinitely primes $p\in\mathbb{N}$ such that $p \equiv 35 (\text{mod } 77)$, this implies that by the definition of congruence we should be able to generate those $p$ using the expression
 $$ p = 77x + 35 = 7(11x +5)$$
-where $x \in\mathbb{N}$. But, clearly the only prime this could possibly generate is $p=7(1)$, otherwise $7|p \implies$ p is composite, *not* prime. Moreover, $\not\exists x\in\mathbb{N}$ such that $11x + 5 = 1$ is true. So, we have found a  counterexample where this theorem fails if $gcd(a,m) \not= 1$. 
+where $x \in\mathbb{N}$. But, clearly the only prime this could possibly generate is $p=7(1)$, otherwise $7|p \implies$ p is composite, *not* prime. Moreover, $\not\exists x\in\mathbb{N}$ such that $11x + 5 = 1$ is true. So, we have found a counterexample where this theorem fails if $gcd(a,m) \not= 1$. 
 
 Also, though very involved to prove Dirichlet's Theorem generally, we can prove it works pretty easily for specific chosen values of $a$ and $m$. For example, let $a = 3$ and $m = 4$. Clearly, $gcd(3,4) = 1$, so Dirichlet's Theorem applies. We can also prove that there exists infinitely many $p\in\mathbb{N}$ such that
 $$p\equiv 3 (\text{mod }4)$$
