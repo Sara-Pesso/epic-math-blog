@@ -127,9 +127,11 @@ $$P = \{2,3,7,13,43,..\}$$
 
 It's plain to see some of the primes are missing-- at least missing up through iteration $5$-- like $5, 11, 17, 19$. But, we already saw in our example the primes are not generated in order from least to greatest since we generated 43 before 13. This begs the question: does the Euclid-Mullin Sequence generate *all* the primes eventually?
 
-This question was posed originally by the titular Mullin in 1963, but still this question remains open. Generally, we can create variations of the Euclid-Mullin sequence by varying that *seed* we begin the construction with. The *seed* is the initial set $P$ we begin the algorithm with, $P = \{p_1, \cdots, p_k\}$. In the case on the typical Euclid-Mullin sequence, $P = \empty$, with the convention that the empty product is 1 {% cite booker2016varianteuclidmullinsequencecontaining %}.
+This question was posed originally by the titular Mullin in 1963, but still this question remains open. Generally, we can create variations of the Euclid-Mullin sequence by varying that *seed* we begin the construction with. The *seed* is the initial set $P$ we begin the algorithm with, $P = \{p_1, \cdots, p_k\}$. In the case on the typical Euclid-Mullin sequence, $P = \empty$, with the convention that the empty product is 1. Depending on the seed we start with, it is demonstrable that some Euclid-Mullin sequence variations *do not* contain all the primes {% cite booker2016varianteuclidmullinsequencecontaining %}.
 
-{% endquote %}
+Basically, it is not known if there is a single seed that generates all the primes. But, interestingly the previously cited {% reference booker2016varianteuclidmullinsequencecontaining %} proves the *generalized* Eucild construction *does* in fact generate all the primes. The generalized Euclid construction is as follows: 
+
+#TODO
 
 ## Some known functions that generate all the primes
 [Formula for primes](https://en.wikipedia.org/wiki/Formula_for_primes)
