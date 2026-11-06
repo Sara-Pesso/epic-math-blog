@@ -19,7 +19,7 @@ This post is going to serve mostly as an introduction to the primes. I want to g
 1. There are infinitely many primes
 2. Even though do have ways to generate all the primes, these methods are extremely inefficient
 
-And then how these two points give motivation to RSA encryption algorithm. An in-depth explanation and implementation of RSA will be [in a future post!]()
+And then how these two points give motivation to RSA encryption algorithm. An in-depth explanation and implementation of RSA will be [in a future post!](https://sara-pesso.github.io/epic-math-blog/blog/2026/RSA/)
 
 ## A few things to know before we get started...
 I am not going to go into detail about the basic number theory, just some of the more advanced topics. Some prerequisite topics to understand that will make this post more palatable are:
@@ -234,7 +234,7 @@ is prime for all positive integers $n$ {% cite Formulaforprimes %}.
 
 Probably the most applicable use for primes is in cryptography. Even though there's a plethora of functions that *can in theory* generate all the primes, all of these functions are **extremely** inefficient in terms of computational time and energy {% cite Formulaforprimes %}. In RSA encryption for example, we are picking two huge prime numbers (call them $p$ and $q$) and then acting on the massive resultant composite number from their product ($N = pq$). So, even if someone knew $N$, it would take a normal computer to find its prime factorization. So, essentially, coming up with random primes is easy, but finding specific ones is incredibly difficult.
 
-Difficult at least for traditional computers-- Shor's Algorithm and quantum computing threaten the security of RSA encryption, because RSA can be broken if factoring large integers is computationally feasible {% cite Shorsalgorithm %}. But for now, you're safe! For more on RSA, see this [post](). 
+Difficult at least for traditional computers-- Shor's Algorithm and quantum computing threaten the security of RSA encryption, because RSA can be broken if factoring large integers is computationally feasible {% cite Shorsalgorithm %}. But for now, you're safe! For more on RSA, see this [post](https://sara-pesso.github.io/epic-math-blog/blog/2026/RSA/). 
 
 # Conclusion
 In general, regardless of utility of number theory as a whole it is certainly worth studying. Any math that is proofs based and forces people think through and apply theorems to more deeply understand logic in its own right is a worthy endeavor-- especially in a world where mathematics as a field for humans is being threatened by AI. Just because AI may (or may not) be capable of greatly aiding human mathematicians in proving previously unproved conjectures (like the recent developments from OpenAI on the Millennia Problems) does not mean that we as a species should become complacent. If we abandon the study of mathematics simply "because a computer can do it better", we risk losing humanity's ability to think rationally and logically. 
