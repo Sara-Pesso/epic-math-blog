@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Fun With Primes'
+title: 'Fun With Primes Numbers!'
 date: 2026-11-05
 description: Some facts notes about prime numbers from a Number Theory perspective that will be a useful reference in an upcoming project on RSA encryption!
 tags: [number-theory, primes, encryption, rsa]
@@ -8,8 +8,7 @@ categories: [blog]
 featured: true
 marimo: true
 ---
-
-# Fun with Prime Numbers!
+## A few things to know before we get started...
 Some prereqs...
 - prime factorization
 - modular arithmetic/ congruence
@@ -131,9 +130,16 @@ This question was posed originally by the titular Mullin in 1963, but still this
 
 Basically, it is not known if there is a single seed that generates all the primes. But, interestingly the previously cited {% reference booker2016varianteuclidmullinsequencecontaining %} proves the *generalized* Eucild construction *does* in fact generate all the primes. The generalized Euclid construction is as follows: 
 
-#TODO
+{% quote booker2016varianteuclidmullinsequencecontaining %} [I]f $\{p_1,\cdots, p_k\}$ is a set of prime numbers, then for any $I \subseteq \{1,\cdots,k\}$, the number 
+$$N_I = \prod_{i\in I} p_i + \prod_{i\in\{1,\cdots,k\}\backslash I}p_i$$
 
-## Some known functions that generate all the primes
+is coprime to $p_1 \cdots p_k$ and has at least one prime factor. Iteratively
+choosing a set $I$ and a prime $p_{k+1} | N_I$, we obtain an infinite sequence $p1, p2, \cdots$ of distinct prime numbers, as in Euclid’s proof. (Note that Euclid’s construction is the special case in which $I = \empty$ at each step.)
+We call a sequence resulting from this more general construction a generalized Euclid sequence with seed $\{p_1,\cdots, p_k\}$. {% endquote %}
+
+That's pretty complicated, and computationally dense-- but it is a cool result that a variation of the Euclid-Mullin Sequence is proven to generate all the primes.
+
+## Some other functions known to generate all the primes
 [Formula for primes](https://en.wikipedia.org/wiki/Formula_for_primes)
 
 # Is Number Theory Useful?
