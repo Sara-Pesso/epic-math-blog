@@ -95,6 +95,8 @@ We can actually use Euclid's proof of infinite primes to make an algorithm to ge
 This sequence is known as the Euclid-Mullin sequence. 
 
 ### Euclid's Prime Algorithm (Euclid-Mullin Sequence)
+Adapted from {% reference silverman2012friendly %}:
+
 1. Start with the empty set: $P = \{0\}$
 2. $m = 1+1 = 2 \implies P =\{2\}$ (by convention, the empty set product is 1).
 3. $m = 2 +1 = 3$, 3 is prime $\implies P=\{2,3\}$
@@ -120,6 +122,8 @@ A couple millennia after Euclid, in 1837 Peter Dirichlet proved a theorem that c
 > Let $a, \in \mathbb{Z}$ such that $gcd(a,m) = 1$. Then, $\exists$ infinitely many primes that are congruent to $a$ modulo $m$. That is, $\exists$ infinitely many primes $p\in\mathbb{N}$ such that
 
 $$p \equiv a (\text{mod m})$$
+
+{% cite silverman2012friendly %}
 
 The proof of this is very involved and is a lot more than we will get into here, but it is simple to see that is $gcd(a,m) > 1$ this theorem no longer holds. Let's choose $a = 35$ and $m = 77$. Clearly, $gcd(35, 77) = 7$. If there were infinitely primes $p\in\mathbb{N}$ such that $p \equiv 35 (\text{mod } 77)$, this implies that by the definition of congruence we should be able to generate those $p$ using the expression
 $$ p = 77x + 35 = 7(11x +5)$$
@@ -152,7 +156,7 @@ Similarly to the previous prime generator, we have the algorithm:
 3. $m = 4(7)(31) + 3 = 871 = 67(13) \implies P =\{7,13, 67\}$
 4. $m = 4(7)(31)(67) + 3 = 58189 = 19(3061) \implies P =\{7,13,19, 67\}$
 
-And so on and so forth!
+And so on and so forth {% cite silverman2012friendly %}:!
 
 ## Does the Euclid-Mullin Sequence contain all the primes?
 **Short answer:** We don't know!
