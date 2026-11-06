@@ -94,22 +94,42 @@ where $x \in\mathbb{N}$. But, clearly the only prime this could possibly generat
 
 Also, though very involved to prove Dirichlet's Theorem generally, we can prove it works pretty easily for specific chosen values of $a$ and $m$. For example, let $a = 3$ and $m = 4$. Clearly, $gcd(3,4) = 1$, so Dirichlet's Theorem applies. We can also prove that there exists infinitely many $p\in\mathbb{N}$ such that
 $$p\equiv 3 (\text{mod }4)$$
-**without Dirichlet's Theorem!**
+**without Dirichlet's Theorem!** This actually looks pretty similar to Euclid's proof for infinitely many primes, but is also and example of Dirichlet's-- which is pretty cool!
 
 We will show Dirichlet's holds in this case using contradiction. Assume $\exists$ a *finite* amount of primes $p\in\mathbb{N}$ such that $p\equiv 3 (\text{mod }4)$ denoted
 $$P = \{p_0 = 3, p_1 = 7, \cdots, p_n\}$$
-Now, we can define
+Now, we can define a number $m$ (note that $p_0 = 3$ is purposely omitted)
+$$m = 4(p_1\cdots p_n) + 3$$
+We have just forced it to be true that
+$$m\equiv 3(\text{mod }4)$$
 
+Note that $\forall p_i \in P$, $p_i \not|m$ since it would need to be true that if $p_i|m$ and $p_i|4(p_1\cdots p_i \cdots p_n)$, then by the division theorem $p_i| [m - 4(p_1p_2\cdots p_n)] \implies p_i|3$. But, this isn't possible since we purposefully omitted $p_0=3$ from our definition of $m$, and hence $p_i > 3$. Therefore, (by another sub-contradiction) $p_i \not| m$. 
+
+We also know that $m$ is odd because $\forall n\in\mathbb{N}$, $2|4n$ implies $4n$ is even. Then, adding 3 guarantees $4n+3$ will always be odd, and so will $m$. Therefore, the prime factors of $m$, which must come from the finite set $P$ are congruent to either 1 or 3 modulo 4. By construction, $m \equiv 3 (\text{mod }4)$. This means $m$ must have at least one prime factor $q \equiv 3 (\text{mod }4)$ (see the Multiplication Property of Modular Arithmetic). But, previously we showed that *none* of the finitely many primes in $P$ (which we have supposed to be all of those primes such that $p_i \equiv 3 (\text{mod }4)$) divide $m$. Therefore, there **must** exist a prime $p \equiv 3 (\text{mod }4)$ that is not in $P$! 
+
+Therefore, we can conclude there are infinitely many primes $p$ such that $p \equiv 3 (\text{mod }4)$. 
+
+Similarly to the previous prime generator, we have the algorithm:
+1. $P = \{7\}$
+2. $m = 4(7) + 3 = 31 \implies P=\{7,31\}$
+3. $m = 4(7)(31) + 3 = 871 = 67(13) \implies P =\{7,13, 67\}$
+4. $m = 4(7)(31)(67) + 3 = 58189 = 19(3061) \implies P =\{7,13,19, 67\}$
+
+And so on and so forth!
 
 ## Does the Euclid-Mullin Sequence contain all the primes?
-**Short answer:** No!
+**Short answer:** We don't know!
 
-**Long answer:** But there are variations that can!
+**Long answer:** But there is generalization that does contain all the primes!
 
-#TODO: talk about the numbers skipped, etc. 
+Clearly, the Euclid-Mullin Sequence doesn't generate the primes in order. Where we left off in our example of the algorithm, we had
+$$P = \{2,3,7,13,43,..\}$$
 
-[A VARIANT OF THE EUCLID–MULLIN SEQUENCE CONTAINING
-EVERY PRIME](https://arxiv.org/pdf/1605.08929)
+It's plain to see some of the primes are missing-- at least missing up through iteration $5$-- like $5, 11, 17, 19$. But, we already saw in our example the primes are not generated in order from least to greatest since we generated 43 before 13. This begs the question: does the Euclid-Mullin Sequence generate *all* the primes eventually?
+
+This question was posed originally by the titular Mullin in 1963, but still this question remains open. Generally, we can create variations of the Euclid-Mullin sequence by varying that *seed* we begin the construction with. The *seed* is the initial set $P$ we begin the algorithm with, $P = \{p_1, \cdots, p_k\}$. In the case on the typical Euclid-Mullin sequence, $P = \empty$, with the convention that the empty product is 1 {% cite booker2016varianteuclidmullinsequencecontaining %}.
+
+{% endquote %}
 
 ## Some known functions that generate all the primes
 [Formula for primes](https://en.wikipedia.org/wiki/Formula_for_primes)
