@@ -7,6 +7,8 @@ tags: [number-theory, primes, encryption, rsa]
 categories: [blog]
 featured: true
 marimo: true
+related_posts: false
+related_publications: true
 ---
 ## A few things to know before we get started...
 Some prereqs...
