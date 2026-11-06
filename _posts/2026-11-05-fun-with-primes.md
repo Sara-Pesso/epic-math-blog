@@ -103,9 +103,7 @@ Now, we can define a number $m$ (note that $p_0 = 3$ is purposely omitted)
 $$m = 4(p_1\cdots p_n) + 3$$
 We have just forced it to be true that
 $$m\equiv 3(\text{mod }4)$$
-
-Note that $\forall p_i \in P$, $p_i \not|m$ since it would need to be true that if $p_i|m$ and $p_i|4(p_1\cdots p_i \cdots p_n)$, then by the division theorem $p_i| [m - 4(p_1p_2\cdots p_n)] \implies p_i|3$. But, this isn't possible since we purposefully omitted $p_0=3$ from our definition of $m$, and hence $p_i > 3$. Therefore, (by another sub-contradiction) $p_i \not| m$. 
-
+Note that $\forall p_i \in P$, $p_i \not| m$ since it would need to be true that if $p_i|m$ and $p_i|4(p_1\cdots p_i \cdots p_n)$, then by the division theorem $p_i| [m - 4(p_1p_2\cdots p_n)] \implies p_i|3$. But, this isn't possible since we purposefully omitted $p_0=3$ from our definition of $m$, and hence $p_i > 3$. Therefore, (by another sub-contradiction) $p_i \not| m$. 
 We also know that $m$ is odd because $\forall n\in\mathbb{N}$, $2|4n$ implies $4n$ is even. Then, adding 3 guarantees $4n+3$ will always be odd, and so will $m$. Therefore, the prime factors of $m$, which must come from the finite set $P$ are congruent to either 1 or 3 modulo 4. By construction, $m \equiv 3 (\text{mod }4)$. This means $m$ must have at least one prime factor $q \equiv 3 (\text{mod }4)$ (see the Multiplication Property of Modular Arithmetic). But, previously we showed that *none* of the finitely many primes in $P$ (which we have supposed to be all of those primes such that $p_i \equiv 3 (\text{mod }4)$) divide $m$. Therefore, there **must** exist a prime $p \equiv 3 (\text{mod }4)$ that is not in $P$! 
 
 Therefore, we can conclude there are infinitely many primes $p$ such that $p \equiv 3 (\text{mod }4)$. 
@@ -136,7 +134,7 @@ Basically, it is not known if there is a single seed that generates all the prim
 $$N_I = \prod_{i\in I} p_i + \prod_{i\in\{1,\cdots,k\}\backslash I}p_i$$
 
 is coprime to $p_1 \cdots p_k$ and has at least one prime factor. Iteratively
-choosing a set $I$ and a prime $p_{k+1} | N_I$, we obtain an infinite sequence $p1, p2, \cdots$ of distinct prime numbers, as in Euclid’s proof. (Note that Euclid’s construction is the special case in which $I = \empty$ at each step.)
+choosing a set $I$ and a prime $p_{k+1} | N_I$, we obtain an infinite sequence $p1, p2, \cdots$ of distinct prime numbers, as in Euclid’s proof. (Note that Euclid’s construction is the special case in which $I = \emptyset$ at each step.)
 We call a sequence resulting from this more general construction a generalized Euclid sequence with seed $\{p_1,\cdots, p_k\}$. {% endquote %}
 
 That's pretty complicated, and computationally dense-- but it is a cool result that a variation of the Euclid-Mullin Sequence is proven to generate all the primes.
