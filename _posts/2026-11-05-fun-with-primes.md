@@ -9,6 +9,8 @@ featured: true
 marimo: true
 related_posts: false
 related_publications: true
+toc:
+  sidebar: left
 ---
 # Introduction from Yours Truly
 This semester, I've had the privilege to take a graduate level course in Number Theory as I work towards my MS. As someone who enjoys puzzles and solving problems, such a proofs based class has been pretty fun. I've heard criticisms about Number Theory previously: how it's not applicable or useful to anything in the real world. Generally, I think this misses the point of study pure mathematics. Not to mention it's up to people to *find* or create a way to use this stuff productively. 
@@ -28,13 +30,13 @@ I am not going to go into detail about the basic number theory, just some of the
 
 If you understand how these work, understanding this post should be a cake walk!
 
-## Are there infinite prime numbers?
+# Are there infinite prime numbers?
 **Short answer:** YES!!
 
 **Long answer:** YES!! We have known this since before Christ, in fact!
 Sometime around 300 B.C. Euclid figured this out using a clever contradiction. 
 
-### Euclid's Proof of Infinite Primes
+## Euclid's Proof of Infinite Primes
 Suppose there are a finite amount of prime natural numbers, then there should be a maximum prime. We can define the set of $n$ primes as
 
 $$P = \{p \in \mathbb{N}: \text{p is prime}\}= \{p_1,p_2,...,p_n\}$$
@@ -84,7 +86,7 @@ So, $\not \exists p_i \in P$ such that $p_i|m$. This means, that either
 Either way, there are primes that are *not* in $P$! Therefore, there must exist infinite primes. (Think about it this way, we could add $m$ to $P$ and then repeat this process again, and then do it again, and again, and again-- indefinitely!)
 
 
-## Can we generate primes?
+# Can we generate primes?
 **Short answer:** YES!!
 
 **Long answer:** YES!! There are known functions that can generate every prime number in order-- but they have some computational issues when trying to find the $n^{th}$ prime for very large values of $n$.
@@ -94,7 +96,7 @@ We can actually use Euclid's proof of infinite primes to make an algorithm to ge
 - or $m$ has a new prime factor
 This sequence is known as the Euclid-Mullin sequence. 
 
-### Euclid's Prime Algorithm (Euclid-Mullin Sequence)
+## Euclid's Prime Algorithm (Euclid-Mullin Sequence)
 Adapted from {% reference silverman2012friendly %}:
 
 1. Start with the empty set: $P = \{0\}$
@@ -116,7 +118,7 @@ Therefore, we will **always** have a new prime to append to $P$.
 <br>
 For example, we know that in iteration (5), our new prime factor $p_5 =13$ will not repeat because since $p|(2)(3)(7)(43)$ for $p\in\{2,3,7,43\}$, *none* of $\{2,3,7,43\}$ will divide $(2)(3)(7)(43) + 1$ (by Euclid's Proof of Infinite Primes). 
 
-### Dirichlet's Theorem
+## Dirichlet's Theorem
 A couple millennia after Euclid, in 1837 Peter Dirichlet proved a theorem that came to be known as Dirichlet's Theorem on Arithmetic Progressions, which states
 
 > Let $a, \in \mathbb{Z}$ such that $gcd(a,m) = 1$. Then, $\exists$ infinitely many primes that are congruent to $a$ modulo $m$. That is, $\exists$ infinitely many primes $p\in\mathbb{N}$ such that
