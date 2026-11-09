@@ -61,7 +61,11 @@
 } /* Generic.Output */ /* Generic.Prompt */ /* Generic.Strong */ /* Generic.Subheading */
 .highlight .gt {
   color: #d22323;
-} /* Generic.Traceback */ /* Keyword.Constant */ /* Keyword.Declaration */
+} /* Generic.Traceback */
+.highlight .kc {
+  color: #6ab825;
+  font-weight: bold;
+} /* Keyword.Constant */ /* Keyword.Declaration */
 .highlight .kn {
   color: #6ab825;
   font-weight: bold;
